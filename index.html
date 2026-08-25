@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career Seminar Day Book</title>
+<style>
+  :root{
+    --bg:#f3efe7;
+    --card-bg:#ffffff;
+    --border-red:#9c2b26;
+    --border-red-soft:#c9756d;
+    --ink:#1c1a17;
+    --gray:#6b6560;
+    --gray-light:#8a8580;
+    --pill-bg:#eeeae2;
+    --pill-border:#c9c2b6;
+    --missed-bg:#f4e7e2;
+    --missed-border:#c9756d;
+    --link:#9c2b26;
+    --unconnected:#a39c92;
+    --nav-bg:#ffffff;
+    --table-head:#efe9df;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .topbar{
+    background:var(--nav-bg);
+    border-bottom:1px solid var(--pill-border);
+    padding:18px 24px 0 24px;
+    position:sticky;
+    top:0;
+    z-index:10;
+  }
+  .topbar h1{
+    margin:0 0 16px 0;
+    font-size:20px;
+    font-weight:600;
+  }
+  .nav{
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+    padding-bottom:16px;
+    scrollbar-width:thin;
+  }
+  .nav button{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:13px;
+    white-space:nowrap;
+    padding:10px 18px;
+    border-radius:20px;
+    border:1px solid var(--pill-border);
+    background:#fff;
+    color:var(--ink);
+    cursor:pointer;
+  }
+  .nav button.active{
+    background:#1c1a17;
+    color:#fff;
+    border-color:#1c1a17;
+  }
+  main{
+    max-width:1000px;
+    margin:0 auto;
+    padding:28px 24px 80px 24px;
+  }
+  .day-card{
+    display:flex;
+    gap:20px;
+    background:var(--card-bg);
+    border:2px solid var(--border-red);
+    border-radius:10px;
+    padding:26px 28px;
+    margin-bottom:22px;
+  }
+  .day-num{
+    flex:0 0 70px;
+    text-align:center;
+  }
+  .day-num .n{
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:40px;
+    font-weight:700;
+    line-height:1;
+    color:var(--ink);
+  }
+  .day-num .lbl{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:11px;
+    letter-spacing:.06em;
+    color:var(--gray-light);
+    text-transform:uppercase;
+  }
+  .day-body{flex:1; min-width:0;}
+  .day-meta{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+  }
+  .date{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:14px;
+    color:var(--ink);
+    font-weight:600;
+  }
+  .tag{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:12px;
+    color:var(--gray);
+    border:1px solid var(--pill-border);
+    background:var(--pill-bg);
+    border-radius:5px;
+    padding:2px 9px;
+  }
+  .tag.block{
+    background:#1c1a17;
+    color:#fff;
+    border-color:#1c1a17;
+  }
+  .day-title{
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:26px;
+    font-weight:700;
+    margin:0 0 18px 0;
+  }
+  .row{
+    display:grid;
+    grid-template-columns:150px 1fr;
+    gap:14px;
+    margin-bottom:14px;
+    align-items:start;
+  }
+  .row .k{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:11px;
+    letter-spacing:.05em;
+    color:var(--gray-light);
+    text-transform:uppercase;
+    padding-top:3px;
+  }
+  .row ul{margin:0;padding-left:18px;}
+  .row li{margin-bottom:6px;font-size:15px;line-height:1.45;}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;}
+  .badge{
+    background:var(--pill-bg);
+    border:1px solid var(--pill-border);
+    border-radius:6px;
+    padding:6px 12px;
+    font-size:14px;
+    color:var(--ink);
+  }
+  .links{display:flex;flex-wrap:wrap;gap:8px;}
+  .link-pill{
+    border:1px solid var(--border-red-soft);
+    color:var(--link);
+    border-radius:6px;
+    padding:6px 12px;
+    font-size:14px;
+    text-decoration:none;
+  }
+  .link-pill.unconnected{
+    color:var(--unconnected);
+    border-style:dashed;
+    font-style:italic;
+  }
+  .missed{
+    background:var(--missed-bg);
+    border:1px solid var(--missed-border);
+    border-radius:8px;
+    padding:16px 18px;
+    margin-top:6px;
+    font-size:14.5px;
+    line-height:1.5;
+  }
+  .missed .lbl{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:11px;
+    letter-spacing:.05em;
+    color:var(--link);
+    font-weight:700;
+    margin-right:8px;
+  }
+  section.block{margin-top:56px;}
+  h2.section-title{
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:30px;
+    margin:0 0 6px 0;
+  }
+  .section-sub{
+    color:var(--gray);
+    font-size:15px;
+    margin:0 0 20px 0;
+  }
+  table{
+    width:100%;
+    border-collapse:collapse;
+    background:var(--card-bg);
+    border:2px solid var(--border-red);
+    border-radius:8px;
+    overflow:hidden;
+  }
+  thead th{
+    background:var(--table-head);
+    text-align:left;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:11px;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    color:var(--gray);
+    padding:12px 16px;
+    border-bottom:1px solid var(--pill-border);
+  }
+  tbody td{
+    padding:14px 16px;
+    border-bottom:1px solid #ece6da;
+    font-size:14.5px;
+    vertical-align:top;
+  }
+  tbody tr:last-child td{border-bottom:none;}
+  td.what b, td.unit{font-weight:700;}
+  td a, .inline-link{
+    color:var(--link);
+    text-decoration:underline;
+  }
+  .unconnected-text{
+    color:var(--unconnected);
+    font-style:italic;
+    text-decoration:none;
+  }
+  .resources{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+  }
+  @media (max-width:800px){
+    .resources{grid-template-columns:repeat(2,1fr);}
+    .day-card{flex-direction:column;}
+    .row{grid-template-columns:1fr;}
+  }
+  @media (max-width:520px){
+    .resources{grid-template-columns:1fr;}
+  }
+  .resource-card{
+    background:var(--card-bg);
+    border:2px solid var(--border-red);
+    border-radius:10px;
+    padding:22px;
+  }
+  .resource-card h3{
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:19px;
+    margin:0 0 10px 0;
+  }
+  .resource-card p{
+    font-size:14px;
+    color:#4a453f;
+    line-height:1.5;
+    margin:0 0 14px 0;
+  }
+  .resource-card .links{margin-top:2px;}
+  footer{
+    margin-top:60px;
+    padding-top:20px;
+    border-top:1px solid var(--pill-border);
+    color:var(--gray);
+    font-size:13.5px;
+    line-height:1.6;
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <h1>Career Seminar Day Book</h1>
+  <div class="nav" id="unitNav"></div>
+</div>
+
+<main>
+  <div id="dayCards"></div>
+
+  <section class="block">
+    <h2 class="section-title">Everything assigned so far</h2>
+    <p class="section-sub">One list, in the order it was assigned.</p>
+    <table>
+      <thead>
+        <tr><th>Assigned</th><th>What</th><th>Due</th><th>Where</th></tr>
+      </thead>
+      <tbody id="assignedBody"></tbody>
+    </table>
+  </section>
+
+  <section class="block">
+    <h2 class="section-title">The rest of the semester</h2>
+    <p class="section-sub">Week level for now. Each unit opens up day by day, the way Unit 1 does, once we get there.</p>
+    <table>
+      <thead>
+        <tr><th>Wk</th><th>Dates</th><th>Unit</th><th>Focus</th></tr>
+      </thead>
+      <tbody id="weeksBody"></tbody>
+    </table>
+  </section>
+
+  <section class="block">
+    <h2 class="section-title">Resources you'll keep using</h2>
+    <p class="section-sub">These come back all semester. Bookmark them.</p>
+    <div class="resources" id="resourceCards"></div>
+  </section>
+
+  <footer>
+    Everything here is also in Schoology &mdash; this page just puts it in one place, in order. Anything marked <em>link goes here</em> hasn't been connected yet.
+  </footer>
+</main>
+
+<script>
+/* ============================================================
+   DATA
+   Every link with u:"" is NOT YET WIRED — renders as
+   "link goes here" per the site's own footer convention.
+   Fill in real Drive/SchooLinks/etc URLs before publishing.
+   ============================================================ */
+
+const UNITS = [
+  "1 · Intro & Cohort",
+  "2 · Employability",
+  "3 · Career Exploration",
+  "4 · Technology",
+  "5 · Networking",
+  "6",
+];
+
+const DAYS = [
+  {
+    n: 1, date: "Tue Aug 18", type: "ALL", block: "45",
+    title: "Love / Hate, and what this class is",
+    did: [
+      "Love/Hate — three things you love doing, three you can't stand",
+      "Two Truths and a Job",
+      "Where do you stand — the human continuum, 1 to 10",
+      "Agreements, passes, Remind, SchooLinks, ID cards"
+    ],
+    have: ["Love/Hate sheet"],
+    due: [
+      {t:"Behavior & Transportation Agreement, signed", when:"Fri Aug 21"},
+      {t:"Read the syllabus", when:""}
+    ],
+    links: [
+      {t:"Behavior & Transportation Agreement", u:""},
+      {t:"Syllabus", u:""},
+      {t:"Day 1 slides", u:""}
+    ],
+    missed: "Write your own Love/Hate sheet — three and three. Pick up the agreement, your pass and the Remind code, then come find me for the one-on-one check-in."
+  },
+  {
+    n: 2, date: "Wed Aug 19", type: "ALL", block: "45",
+    title: "The four job-launch gaps",
+    did: [
+      "Vocabulary: pain point · entry-level job · aspiration · career ladder · social capital",
+      "Read Manno, “Four Job-Launch Pain Points in Young People's Career Journey”",
+      "Where Do I Stand? — rated yourself 1–10 on each of the four gaps",
+      "SchooLinks profile and résumé walkthrough"
+    ],
+    have: ["Where Do I Stand? sheet"],
+    due: [
+      {t:"SchooLinks profile + résumé", when:"TBD"}
+    ],
+    links: [
+      {t:"The article (Forbes)", u:""},
+      {t:"Where Do I Stand? handout", u:""},
+      {t:"SchooLinks slides", u:""},
+      {t:"SchooLinks", u:""}
+    ],
+    missed: "Read the article and get the five terms. Fill in the Where Do I Stand? sheet — then find a partner before the Four Corners activity so you hear all four gaps out loud."
+  },
+  {
+    n: 3, date: "Thu Aug 20", type: "ALL", block: "45",
+    title: "Solutions to gaps",
+    did: [
+      "Four Corners — the room taught all four gaps",
+      "Solutions to Gaps — what the school could do, what I could do",
+      "Silent Conversation on four posters, four rotations, the “+” rule",
+      "What this class actually is, mapped onto the four gaps"
+    ],
+    have: ["Solutions to Gaps worksheet", "Four wall posters (still up)"],
+    due: [
+      {t:"Three things people come to you for — each labelled good at / like a lot / known for, plus a competency word", when:"Fri Aug 21"},
+      {t:"Start your Who Knows You list", when:"Fri Aug 21"}
+    ],
+    links: [
+      {t:"Solutions to Gaps + Who Knows You handout", u:""},
+      {t:"Day 3 slides", u:""}
+    ],
+    missed: "Get the Solutions to Gaps handout — Who Knows You is on the back. The posters are still on the wall, so come read them, then do both homework pieces."
+  },
+  {
+    n: 4, date: "Fri Aug 21", type: "ALL", block: "45",
+    title: "Who knows you, and the workday you want",
+    did: [
+      "Competency words — the group named the word for each of you",
+      "Who Knows You — counted before, traded categories with three people, counted after",
+      "Best / Worst Workday — started, hour by hour, no job titles ever. We ran out of time; it carries to Monday",
+      "Building introductions did not run — moved to Wednesday"
+    ],
+    have: ["Who Knows You sheet, before + after counts", "Best / Worst Workday sheet (started)"],
+    due: [
+      {t:"Move your names into the Professional Contacts document", when:"Mon Aug 24"}
+    ],
+    links: [
+      {t:"Professional Contacts — make your copy", u:""},
+      {t:"Solutions to Gaps + Who Knows You handout", u:""},
+      {t:"Best / Worst Workday sheet", u:""}
+    ],
+    missed: "The Who Knows You sheet needs a partner for the trading round — the two counts mean nothing filled in alone. Grab a partner at lunch — Monday's survey block is built for catching this up."
+  },
+  {
+    n: 5, date: "Mon Aug 24", type: "BLOCK", block: "83",
+    title: "Favorite Things",
+    did: [
+      "Quick survey — where everyone got to on the workday sheet",
+      "Favorite Things modelled: components, ranking, AEIOU, descriptors",
+      "Your own activity — one example written all the way through",
+      "Back to Best / Worst Workday with AEIOU in hand"
+    ],
+    have: ["Favorite Things worksheet #1", "Workday sheet, finished"],
+    due: [
+      {t:"Favorite Things #2 — a second activity, nothing like the first", when:"Wed Aug 26"}
+    ],
+    links: [
+      {t:"Best / Worst Workday sheet", u:""}
+    ],
+    missed: "You need your Day 1 loves before you can start. Come in and do the worksheet with a partner — and you can start a workday sheet cold during the survey block."
+  },
+  {
+    n: 6, date: "Wed Aug 26", type: "ALL", block: "45",
+    title: "First journal, and the hall pass",
+    did: [
+      "Journal #1 — the Wednesday routine starts and runs every Wednesday",
+      "Employability Skills self-assessment, contact updates, share-outs",
+      "Building introductions — the hall pass, and the staff who'll ask where you're going"
+    ],
+    have: ["Journal #1", "Favorite Things worksheet #2", "A hall pass you can explain"],
+    due: [
+      {t:"Favorite Things #2", when:"today"}
+    ],
+    links: [],
+    missed: "Make up the journal entry and turn in the second worksheet. The hall-pass conversation happens one-on-one with me before you get a pass."
+  },
+  {
+    n: 7, date: "Thu Aug 27", type: "BLOCK", block: "83",
+    title: "Common denominators",
+    did: [
+      "The words that repeat across both your activities — that's the finding",
+      "LinkedIn, and the Eve Vang example",
+      "Mock interview using your Favorite Things"
+    ],
+    have: ["Your common-denominator list"],
+    due: [
+      {t:"Unit 2 — Employability Skills — opens Aug 31", when:""}
+    ],
+    links: [],
+    missed: "This step needs two finished activities. If you're short one, get it done before Unit 2 — everything after this is built on that list."
+  }
+];
+
+const ASSIGNED = [
+  {assigned:"Tue Aug 18", what:"Behavior & Transportation Agreement, signed", due:"Fri Aug 21", where:"Behavior & Transportation Agreement", u:""},
+  {assigned:"Wed Aug 19", what:"SchooLinks profile + résumé", due:"TBD", where:"The article (Forbes)", u:""},
+  {assigned:"Thu Aug 20", what:"Three things people come to you for — each labelled good at / like a lot / known for, plus a competency word", due:"Fri Aug 21", where:"Solutions to Gaps + Who Knows You handout", u:""},
+  {assigned:"Thu Aug 20", what:"Start your Who Knows You list", due:"Fri Aug 21", where:"Solutions to Gaps + Who Knows You handout", u:""},
+  {assigned:"Fri Aug 21", what:"Move your names into the Professional Contacts document", due:"Mon Aug 24", where:"Professional Contacts — make your copy", u:""},
+  {assigned:"Mon Aug 24", what:"Favorite Things #2 — a second activity, nothing like the first", due:"Wed Aug 26", where:"Best / Worst Workday sheet", u:""},
+  {assigned:"Wed Aug 26", what:"Favorite Things #2", due:"today", where:"Schoology", u:""}
+];
+
+const WEEKS = [
+  {wk:3, dates:"Aug 31 – Sep 3", unit:"2 — Employability Skills", focus:"Rubric, self-assessment, pick two skills to work on"},
+  {wk:4, dates:"Sep 8 – 11", unit:"3 — Career Exploration", focus:"SchooLinks Career Center, clusters, interest inventory"},
+  {wk:5, dates:"Sep 14 – 18", unit:"3 — Career Exploration", focus:"Ikigai, industry research, resource share"},
+  {wk:6, dates:"Sep 21 – 25", unit:"4 — Technology Literacy", focus:"Email etiquette, calendar, digital conferencing"},
+  {wk:7, dates:"Sep 29 – Oct 1", unit:"4 — Technology Literacy", focus:"AI literacy · Odyssey Plans begin"},
+  {wk:8, dates:"Oct 5 – 9", unit:"4 → 5 Networking", focus:"Odyssey Plans finish · contact list built"},
+  {wk:9, dates:"Oct 12 – 14", unit:"6 — Informational Interviews", focus:"How to prepare, conduct, follow up"},
+  {wk:10, dates:"Oct 21 – 23", unit:"6 — Informational Interviews", focus:"Outreach emails sent"},
+  {wk:11, dates:"Oct 26 – 30", unit:"7 — Independence", focus:"Interview #1 · advisor meetings"},
+  {wk:12, dates:"Nov 2 – 6", unit:"8 — Financial Literacy", focus:"Cost of training, post-secondary money"},
+  {wk:13, dates:"Nov 9 – 13", unit:"7 — Independence", focus:"Interview #2 · LinkedIn-model profile"},
+  {wk:14, dates:"Nov 16 – 20", unit:"9 — Work-Based Learning", focus:"Job shadow, part-time work, internship setup"},
+  {wk:15, dates:"Nov 23", unit:"7 — Independence", focus:"Interview #3 (short week)"},
+  {wk:16, dates:"Nov 30 – Dec 3", unit:"10 — Post-Secondary", focus:"Labor market, salaries, plan draft"},
+  {wk:17, dates:"Dec 7 – 11", unit:"7 — Independence", focus:"Interviews #4 and #5 · résumé export"},
+  {wk:18, dates:"Dec 14 – 18", unit:"11 — Capstone", focus:"Build and rehearse"},
+  {wk:19, dates:"Dec 21 – 22", unit:"11 — Capstone", focus:"Presentations, final journal"}
+];
+
+const RESOURCES = [
+  {
+    title:"Professional Contacts",
+    body:"Every adult who knows something about you. Started from the Who Knows You sheet, added to all semester, used in October to set up interviews.",
+    links:[{t:"Make your copy", u:""}]
+  },
+  {
+    title:"Informational Interviews",
+    body:"How to prepare, conduct and follow up. Five of these happen in Quarter 2.",
+    links:[{t:"Open the document", u:""}]
+  },
+  {
+    title:"SchooLinks",
+    body:"Your profile, your résumé, the Career Center and the assessments.",
+    links:[{t:"Go to SchooLinks", u:""}]
+  },
+  {
+    title:"Syllabus & agreements",
+    body:"The 2026-27 syllabus and the Behavior & Transportation Agreement.",
+    links:[{t:"Syllabus", u:""}, {t:"Agreement", u:""}]
+  },
+  {
+    title:"Career search",
+    body:"BLS Occupational Outlook Handbook, CareerForce MN, CareerOneStop, Jobs Explained.",
+    links:[{t:"BLS Handbook", u:""}]
+  }
+];
+
+/* ============================================================
+   RENDER
+   ============================================================ */
+
+function esc(s){
+  return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
+
+function linkPillHTML(link){
+  if(link.u){
+    return `<a class="link-pill" href="${esc(link.u)}" target="_blank" rel="noopener">${esc(link.t)}</a>`;
+  }
+  return `<span class="link-pill unconnected">${esc(link.t)} — link goes here</span>`;
+}
+
+function inlineLinkHTML(text, u){
+  if(u){
+    return `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(text)}</a>`;
+  }
+  return `<span class="unconnected-text">${esc(text)} — link goes here</span>`;
+}
+
+// nav
+const navEl = document.getElementById('unitNav');
+UNITS.forEach((u, i) => {
+  const b = document.createElement('button');
+  b.textContent = u;
+  if(i === 0) b.classList.add('active');
+  navEl.appendChild(b);
+});
+
+// day cards
+const cardsEl = document.getElementById('dayCards');
+DAYS.forEach(d => {
+  const card = document.createElement('div');
+  card.className = 'day-card';
+
+  const dueHTML = d.due.map(x => {
+    const when = x.when ? ` — <span style="color:var(--gray-light)">due ${esc(x.when)}</span>` : "";
+    return `<li>${esc(x.t)}${when}</li>`;
+  }).join("");
+
+  const haveHTML = d.have.map(h => `<span class="badge">${esc(h)}</span>`).join("");
+  const didHTML = d.did.map(x => `<li>${esc(x)}</li>`).join("");
+  const linksRow = d.links.length ? `
+      <div class="row">
+        <div class="k">Links</div>
+        <div class="links">${d.links.map(linkPillHTML).join("")}</div>
+      </div>` : "";
+
+  card.innerHTML = `
+    <div class="day-num">
+      <div class="n">${d.n}</div>
+      <div class="lbl">Day</div>
+    </div>
+    <div class="day-body">
+      <div class="day-meta">
+        <span class="date">${esc(d.date)}</span>
+        <span class="tag ${d.type === 'BLOCK' ? 'block' : ''}">${esc(d.type)} · ${esc(d.block)}</span>
+      </div>
+      <h3 class="day-title">${esc(d.title)}</h3>
+      <div class="row">
+        <div class="k">What we did</div>
+        <ul>${didHTML}</ul>
+      </div>
+      <div class="row">
+        <div class="k">You should have</div>
+        <div class="badges">${haveHTML}</div>
+      </div>
+      <div class="row">
+        <div class="k">Assigned</div>
+        <ul>${dueHTML}</ul>
+      </div>
+      ${linksRow}
+      <div class="missed"><span class="lbl">Missed this day</span>${esc(d.missed)}</div>
+    </div>
+  `;
+  cardsEl.appendChild(card);
+});
+
+// assigned table
+const assignedBody = document.getElementById('assignedBody');
+ASSIGNED.forEach(row => {
+  const tr = document.createElement('tr');
+  tr.innerHTML = `
+    <td>${esc(row.assigned)}</td>
+    <td class="what"><b>${esc(row.what)}</b></td>
+    <td>${esc(row.due)}</td>
+    <td>${inlineLinkHTML(row.where, row.u)}</td>
+  `;
+  assignedBody.appendChild(tr);
+});
+
+// weeks table
+const weeksBody = document.getElementById('weeksBody');
+WEEKS.forEach(row => {
+  const tr = document.createElement('tr');
+  tr.innerHTML = `
+    <td>${row.wk}</td>
+    <td>${esc(row.dates)}</td>
+    <td class="unit">${esc(row.unit)}</td>
+    <td>${esc(row.focus)}</td>
+  `;
+  weeksBody.appendChild(tr);
+});
+
+// resource cards
+const resourceEl = document.getElementById('resourceCards');
+RESOURCES.forEach(r => {
+  const card = document.createElement('div');
+  card.className = 'resource-card';
+  card.innerHTML = `
+    <h3>${esc(r.title)}</h3>
+    <p>${esc(r.body)}</p>
+    <div class="links">${r.links.map(l => inlineLinkHTML(l.t, l.u)).join(" &nbsp; ")}</div>
+  `;
+  resourceEl.appendChild(card);
+});
+</script>
+</body>
+</html>
