@@ -1,29 +1,37 @@
 # Career Seminar Day Book — rebuild handoff
 
-## What this is
-A from-scratch rebuild of the course-hub website, since the old one (a Claude Artifact) went unreadable from Cowork sessions due to a network block. Content is exact — retyped straight from your screenshots of the live site (Days 1–7, the assignments table, the weeks 3–19 table, resource cards, footer), not reconstructed from memory. Design tweak applied: card and table borders are now solid red (`#9c2b26`), interiors stay white/gray/black.
+## What changed, Aug 25 — planning/public split
+The site is no longer one hand-edited HTML file. It's now generated from a single data file, so there's no way for the public and planning versions to drift apart the way the old site did.
 
-`index.html` is a single self-contained file — no build step, no dependencies. Open it directly in a browser to check it, or drop it straight into a GitHub repo.
+**Three source files, one command:**
+- `days-data.js` — the only file you edit. Every day and every assignment row carries `published: true` or `false`.
+- `template.html` — the shared page design (don't need to touch this normally).
+- `build.js` — run `node build.js` after editing `days-data.js`. It generates two files:
+  - **`index.html`** — public, only `published: true` days/assignments. This is what gets pushed to `careerseminar.netlify.app` for students.
+  - **`plan.html`** — everything, drafts included. Amber banner pinned at the top while you scroll, amber dashed border + a "DRAFT — NOT YET TAUGHT" ribbon on any day that isn't published yet. Already-published days show in the normal red style even here, so you can tell at a glance which of the two you're looking at, and which days within the planning copy are already live.
 
-## What's NOT done yet — on purpose
-Every "Links" pill and resource link is rendered as **"— link goes here"** (dashed border, italic) instead of a guessed URL. Screenshots show text, not hrefs — I don't have the real URLs, and guessing would risk sending students to the wrong place. Search `u:""` in the `DAYS`, `ASSIGNED`, and `RESOURCES` arrays near the top of the `<script>` block in `index.html` — each one just needs its `u:` value filled in with the real link (Drive share link, SchooLinks URL, etc.) and it'll switch from placeholder styling to a live link automatically.
+**To publish a day once you've actually taught it:** open `days-data.js`, flip that day's `published` to `true` (and fix its content to match what actually happened, the way we corrected Day 5), run `node build.js`, then commit + push `index.html`. `plan.html` never needs to go anywhere public — see below.
 
-A couple I can pre-fill for you from this session's work, if you want them wired now — tell me and I'll drop them in:
-- Day 5 slides (your edited copy): Google Slides id `1fnE6pPwZ8KVaCxaz3Fz6xDaC7_c8veRGji5WZwyE6Ew`
-- Favorite Things worksheet source doc: Google Doc id `1qcOeL3_789Ao2I3HlejaZaYN_wpTLAaihB4Of7YbYDw` (double-check this is the one you want students opening, vs. the print version)
+**Currently:** Days 1–5 are published (Aug 18–24, all already taught). Days 6–7 are drafted but not published — they won't appear on the public site until you flip them after teaching them.
 
-Everything else — Day 1/3 slides, Syllabus, Behavior & Transportation Agreement, SchooLinks, BLS Handbook, Professional Contacts, the various handouts — needs your real Drive/SchooLinks links.
+## Where plan.html should live
+It's not linked from anywhere on the public site, so nobody finds it by browsing. Two options, your call:
+- **Keep it local only** — don't push it anywhere, just double-click the file on your Mac when you want to see it. Zero exposure, but only viewable on that one machine.
+- **Push it to the same Netlify site** at an unlisted path (e.g. `careerseminar.netlify.app/plan.html`) so you can check it from your phone too. This is obscurity, not real security — anyone who guessed or found that exact URL could open it. The content isn't sensitive (lesson drafts, not student data), so that's probably fine, but if you want a real lock on it later, Netlify can password-protect a single path — that's a small follow-up, not part of this build.
 
-## Hosting plan (confirmed): GitHub + Netlify
-This Cowork session has no GitHub access (no connector, no local git auth), so the actual repo/push/deploy work needs to happen in a real Claude Code CLI session on your machine. Rough steps for that session:
+## Link sourcing (carried over from the previous handoff)
+Every link was pulled from Drive by title match, not guessed. Two spots had duplicate Drive files with the same title and no clear "final" version:
+- **Day 1 slides** → used `109yXR8fGj6LysDZICoS8bJSzZHxCSKaefPEUdUoTGz4`. Alternate: `1f7Wd_xFxY9lvTippS0aZVs2UN6__7orlU2RkO066_SM` (20 slides vs. 16).
+- **SchooLinks slides** → used `1qcBF1zEwSumoGwkYqLbNw4LoDqvNIMeTrFxw8ZJ5sGc`. Two other near-duplicates exist from the same Aug 17 session.
 
-1. `git init` in a folder containing this `index.html`
-2. Create a GitHub repo (via `gh repo create` or the web UI) and push
-3. Connect the repo in Netlify (New site from Git → pick the repo → no build command needed, publish directory is just the repo root since it's a static file)
-4. Netlify gives you a `*.netlify.app` URL immediately; add a custom domain later if you want one
+Worksheets students fill in use `/copy` (forces "Make a copy"); reference material (slides, syllabus, handouts) uses `/preview` (strips the edit toolbar, read-only regardless of sharing role); nothing links with `/edit`.
 
-Both GitHub and Netlify are free at this scale (one small static site, low traffic) — no billing concerns.
+## Hosting (unchanged): GitHub + Netlify
+Repo lives in `Pathways Work/Classroom Embedded/Claude Course Revisions/Career Seminar/07 Website/` on your machine, pushed via a real Claude Code CLI session — this Cowork session still can't push to GitHub directly.
 
 ## Files in this folder
-- `index.html` — the site
-- `preview_top.png`, `preview_mid.png` — quick visual check renders (not needed for the deploy, just so you can see it before opening the real file)
+- `days-data.js` — edit this for content/publish changes
+- `template.html` — shared design, rarely touched
+- `build.js` — run after editing days-data.js
+- `index.html` — generated, public
+- `plan.html` — generated, planning-only
