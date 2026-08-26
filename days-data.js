@@ -119,7 +119,8 @@ const DAYS = [
     links: [
       {t:"Professional Contacts — make your copy", u:"https://docs.google.com/document/d/16AKMNz0kI8voEOYHW44cnoOSRRGOUlRIU8ikYPmUDY0/copy"},
       {t:"Solutions to Gaps + Who Knows You handout", u:"https://docs.google.com/document/d/1mMUU8ICpqyjta65dn_zaCJ9NdKnBSepOL5jzG-c210g/copy"},
-      {t:"Best / Worst Workday sheet", u:"https://docs.google.com/document/d/1wigZ2OF7IfDHcrk3UHx-47PyG6fbCWc0X_z-WF_JEmk/copy"}
+      {t:"Best / Worst Workday sheet", u:"https://docs.google.com/document/d/1wigZ2OF7IfDHcrk3UHx-47PyG6fbCWc0X_z-WF_JEmk/copy"},
+      {t:"Day 4 slides", u:"https://docs.google.com/presentation/d/1TQlDqlzKE-9WvNCb0qFlZYfnpt9oxiSXKaX9kQ_MgTQ/preview"}
     ],
     missed: "The Who Knows You sheet needs a partner for the trading round — the two counts mean nothing filled in alone. Grab a partner at lunch — Monday's survey block is built for catching this up."
   },
@@ -139,7 +140,8 @@ const DAYS = [
     links: [
       {t:"Favorite Things Activity — my example (backpacking)", u:"https://docs.google.com/document/d/1En9qsmV08ujMjJCtCXWL2jTbeX7ggNHmn689Cc2LFW8/preview"},
       {t:"Favorite Things worksheet", u:"https://docs.google.com/document/d/1qcOeL3_789Ao2I3HlejaZaYN_wpTLAaihB4Of7YbYDw/copy"},
-      {t:"Best / Worst Workday sheet", u:"https://docs.google.com/document/d/1wigZ2OF7IfDHcrk3UHx-47PyG6fbCWc0X_z-WF_JEmk/copy"}
+      {t:"Best / Worst Workday sheet", u:"https://docs.google.com/document/d/1wigZ2OF7IfDHcrk3UHx-47PyG6fbCWc0X_z-WF_JEmk/copy"},
+      {t:"Day 5 slides", u:"https://docs.google.com/presentation/d/1fnE6pPwZ8KVaCxaz3Fz6xDaC7_c8veRGji5WZwyE6Ew/preview"}
     ],
     missed: "You need your Day 1 loves before you can start. Come in and do the worksheet with a partner — and you can start a workday sheet cold during the survey block."
   },

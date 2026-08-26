@@ -1,6 +1,13 @@
 # Career Seminar Course Curriculum — rebuild handoff
 
-## What changed, Aug 26 (latest round) — Day 6 published
+## Standing practice (decided, applies every lesson going forward)
+Every day gets its slide deck linked on the site as soon as the deck exists — this is not a one-off, do it automatically each lesson without waiting to be asked. Find the deck in the **2026-27 Seminar Materials** Drive folder (day decks often appear there as shortcuts — resolve the shortcut to its real presentation file, since duplicate-titled files exist and shortcuts don't expose their target through basic metadata; search by title with `mimeType = 'application/vnd.google-apps.presentation'` to find the real file). Add it to that day's `links` array in `days-data.js` as `{t:"Day N slides", u:".../preview"}`, run `node build.js`, then commit.
+
+## What changed, Aug 26 (this round) — Day 4 & Day 5 slides added
+- **Day 4 slides** (`1TQlDqlzKE-9WvNCb0qFlZYfnpt9oxiSXKaX9kQ_MgTQ`) and **Day 5 slides** (`1fnE6pPwZ8KVaCxaz3Fz6xDaC7_c8veRGji5WZwyE6Ew`) added to their days' link lists, matching the pattern already used for Days 1, 3, and 6. Day 1 and Day 3 already had slides linked; Day 2 already has its SchooLinks walkthrough deck linked (a different kind of deck, not a daily recap). Day 7 has no deck yet since it isn't taught/published.
+- **Day 6 lesson plan** updated to match Bob's hand-edit to the Day 6 slide deck: the building-introductions brief now says show hall pass / explain why you have it (not "ask what they do / write it down"), plus two notice-and-discuss prompts. Flagged separately: `days-data.js`'s Day 6 "have" list still references "notes on the back of your workday sheet," which assumed the old "write it down" step — worth a look before teaching.
+
+## What changed, Aug 26 (earlier round) — Day 6 published
 - **Day 6 (Wed Aug 26) flipped to `published: true`** ahead of actually being taught — Bob's explicit call today, not the usual "publish after you teach it" rule. Content reflects the final lesson plan: Favorite Things #1 checked off, Employability Skills (assessment + two self-assessments), Journal #1, and building introductions to three fixed stops (Security, Main Office, Media Center).
 - **New assignment**: Favorite Things #2 ("same steps, a new favorite thing"), assigned Wed Aug 26, due Thu Aug 27 — added to Day 6's `due`/links and as a new `ASSIGNED` row.
 - If Day 6 doesn't run exactly as planned, **correct `days-data.js` to match what actually happened** before the next push, same as Day 5 — don't leave the public site describing a lesson that didn't run that way.
