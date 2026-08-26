@@ -1,6 +1,11 @@
 # Career Seminar Course Curriculum — rebuild handoff
 
-## What changed, Aug 25 (latest round)
+## What changed, Aug 26 (latest round) — Day 6 published
+- **Day 6 (Wed Aug 26) flipped to `published: true`** ahead of actually being taught — Bob's explicit call today, not the usual "publish after you teach it" rule. Content reflects the final lesson plan: Favorite Things #1 checked off, Employability Skills (assessment + two self-assessments), Journal #1, and building introductions to three fixed stops (Security, Main Office, Media Center).
+- **New assignment**: Favorite Things #2 ("same steps, a new favorite thing"), assigned Wed Aug 26, due Thu Aug 27 — added to Day 6's `due`/links and as a new `ASSIGNED` row.
+- If Day 6 doesn't run exactly as planned, **correct `days-data.js` to match what actually happened** before the next push, same as Day 5 — don't leave the public site describing a lesson that didn't run that way.
+
+## What changed, Aug 25
 - **Renamed** "Day Book" → **"Course Curriculum"** throughout (page title, H1, nav references).
 - **Course overview section** added just above the nav tabs (non-sticky masthead, sits above the sticky tab bar): first paragraph of the syllabus course description + Bob's contact info. The Remind reference was in the first draft of this and has been **removed** per Bob's request — contact block is now just name, room, email.
 - **Day 5 links**: added **"Favorite Things Activity — my example (backpacking)"** (`/preview` — Bob's own filled/completed copy, not a blank template) alongside the existing worksheet and Best/Worst Workday links.
@@ -18,7 +23,7 @@ The site is no longer one hand-edited HTML file. It's now generated from a singl
 
 **To publish a day once you've actually taught it:** open `days-data.js`, flip that day's `published` to `true` (and fix its content to match what actually happened, the way we corrected Day 5), run `node build.js`, then commit + push `index.html`. `plan.html` never needs to go anywhere public — see below.
 
-**Currently:** Days 1–5 are published (Aug 18–24, all already taught). Days 6–7 are drafted but not published — they won't appear on the public site until you flip them after teaching them.
+**Currently:** Days 1–6 are published (Aug 18–26). Day 7 is drafted but not published — it won't appear on the public site until you flip it after teaching it.
 
 ## Where plan.html should live
 It's not linked from anywhere on the public site, so nobody finds it by browsing. Two options, your call:
