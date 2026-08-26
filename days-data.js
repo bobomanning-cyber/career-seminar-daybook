@@ -135,7 +135,7 @@ const DAYS = [
     ],
     have: ["Favorite Things worksheet #1, started", "Workday sheet, still in progress"],
     due: [
-      {t:"Favorite Things #1 — finish what you started in class", when:"Wed Aug 26"}
+      {t:"Favorite Things #1 — finish what you started in class", when:"Mon Aug 31"}
     ],
     links: [
       {t:"Favorite Things Activity — my example (backpacking)", u:"https://docs.google.com/document/d/1En9qsmV08ujMjJCtCXWL2jTbeX7ggNHmn689Cc2LFW8/preview"},
@@ -147,16 +147,15 @@ const DAYS = [
   },
   {
     n: 6, date: "Wed Aug 26", type: "ALL", block: "45", published: true,
-    title: "Employability skills, and building introductions",
+    title: "Employability skills, and Journal #1",
     did: [
-      "Favorite Things #1 — checked off",
       "Employability Skills — what employers want, first look at the assessment, two self-assessments",
       "Journal #1 — the Wednesday routine starts and runs every Wednesday",
-      "Building introductions — three stops: Security, Main Office, Media Center"
+      "Didn't get to Favorite Things #1 check-off or building introductions — both move to Thursday"
     ],
-    have: ["Employability Skills Assessment, started", "Journal #1", "Building-introduction notes, on the back of your workday sheet"],
+    have: ["Employability Skills Assessment, started", "Journal #1, started"],
     due: [
-      {t:"Favorite Things #2 — same steps, a new favorite thing", when:"Thu Aug 27"}
+      {t:"Journal Entry #1 — finish and share with Mr. Manning", when:"Thu Aug 27"}
     ],
     links: [
       {t:"Employability Skills Assessment", u:"https://docs.google.com/document/d/1ais2uVUjKcqdHA_VXW-bz-Vy5uasM6Bcbzqt8_wtyxc/copy"},
@@ -164,7 +163,7 @@ const DAYS = [
       {t:"Favorite Things worksheet", u:"https://docs.google.com/document/d/1qcOeL3_789Ao2I3HlejaZaYN_wpTLAaihB4Of7YbYDw/copy"},
       {t:"Day 6 slides", u:"https://docs.google.com/presentation/d/1yhBH7Oap7AujEUSq1LNVIbZ51RRUbVd1W7_IQtoiXdo/preview"}
     ],
-    missed: "Do the Employability Skills self-assessment on your own — pick two skills, score yourself, one example each. Make up the Journal #1 entry. Building introductions is a make-up — come find me to set up your three stops another day."
+    missed: "Do the Employability Skills self-assessment on your own — pick two skills, score yourself, one example each. Finish the Journal #1 entry and share it with me, due Thursday same as everyone else. Favorite Things and building introductions haven't happened for the class yet either — you're not behind on those."
   },
   {
     n: 7, date: "Thu Aug 27", type: "BLOCK", block: "83", published: false,
@@ -189,8 +188,8 @@ const ASSIGNED = [
   {published: true, assigned:"Thu Aug 20", what:"Three things people come to you for — each labelled good at / like a lot / known for, plus a competency word", due:"Fri Aug 21", where:"Solutions to Gaps + Who Knows You handout", u:"https://docs.google.com/document/d/1mMUU8ICpqyjta65dn_zaCJ9NdKnBSepOL5jzG-c210g/copy"},
   {published: true, assigned:"Thu Aug 20", what:"Start your Who Knows You list", due:"Fri Aug 21", where:"Solutions to Gaps + Who Knows You handout", u:"https://docs.google.com/document/d/1mMUU8ICpqyjta65dn_zaCJ9NdKnBSepOL5jzG-c210g/copy"},
   {published: true, assigned:"Fri Aug 21", what:"Move your names into the Professional Contacts document", due:"Mon Aug 24", where:"Professional Contacts — make your copy", u:"https://docs.google.com/document/d/16AKMNz0kI8voEOYHW44cnoOSRRGOUlRIU8ikYPmUDY0/copy"},
-  {published: true, assigned:"Mon Aug 24", what:"Favorite Things #1 — finish what you started in class", due:"Wed Aug 26", where:"Favorite Things worksheet", u:"https://docs.google.com/document/d/1qcOeL3_789Ao2I3HlejaZaYN_wpTLAaihB4Of7YbYDw/copy"},
-  {published: true, assigned:"Wed Aug 26", what:"Favorite Things #2 — same steps, a new favorite thing", due:"Thu Aug 27", where:"Favorite Things worksheet", u:"https://docs.google.com/document/d/1qcOeL3_789Ao2I3HlejaZaYN_wpTLAaihB4Of7YbYDw/copy"}
+  {published: true, assigned:"Mon Aug 24", what:"Favorite Things #1 — finish what you started in class", due:"Mon Aug 31", where:"Favorite Things worksheet", u:"https://docs.google.com/document/d/1qcOeL3_789Ao2I3HlejaZaYN_wpTLAaihB4Of7YbYDw/copy"},
+  {published: true, assigned:"Wed Aug 26", what:"Journal Entry #1 — finish and share with Mr. Manning", due:"Thu Aug 27", where:"Journal for Career Seminar", u:"https://docs.google.com/document/d/1d7rDk7dLS8mayxoI_lEebzi3UqD0KwgF1qWXJyN1CxM/copy"}
 ];
 
 const WEEKS = [
