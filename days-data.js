@@ -159,7 +159,8 @@ const DAYS = [
     links: [
       {t:"Employability Skills Assessment", u:"https://docs.google.com/document/d/1ais2uVUjKcqdHA_VXW-bz-Vy5uasM6Bcbzqt8_wtyxc/copy"},
       {t:"Journal for Career Seminar", u:"https://docs.google.com/document/d/1d7rDk7dLS8mayxoI_lEebzi3UqD0KwgF1qWXJyN1CxM/copy"},
-      {t:"Favorite Things worksheet", u:"https://docs.google.com/document/d/1qcOeL3_789Ao2I3HlejaZaYN_wpTLAaihB4Of7YbYDw/copy"}
+      {t:"Favorite Things worksheet", u:"https://docs.google.com/document/d/1qcOeL3_789Ao2I3HlejaZaYN_wpTLAaihB4Of7YbYDw/copy"},
+      {t:"Day 6 slides", u:"https://docs.google.com/presentation/d/1yhBH7Oap7AujEUSq1LNVIbZ51RRUbVd1W7_IQtoiXdo/preview"}
     ],
     missed: "Do the Employability Skills self-assessment on your own — pick two skills, score yourself, one example each. Make up the Journal #1 entry. Building introductions is a make-up — come find me to set up your three stops another day."
   },
