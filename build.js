@@ -11,7 +11,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const { UNITS, DAYS, ASSIGNED, WEEKS, RESOURCES } = require('./days-data.js');
+const { COURSE_OVERVIEW, UNITS, DAYS, ASSIGNED, WEEKS, RESOURCES } = require('./days-data.js');
 
 const templatePath = path.join(__dirname, 'template.html');
 const template = fs.readFileSync(templatePath, 'utf8');
@@ -29,6 +29,7 @@ function buildPage({ mode, pageTitle, pageH1, days, assigned, outFile }) {
     '__MODE__': mode,
     '__PAGE_TITLE__': pageTitle,
     '__PAGE_H1__': pageH1,
+    '__COURSE_OVERVIEW_JSON__': JSON.stringify(COURSE_OVERVIEW),
     '__UNITS_JSON__': JSON.stringify(UNITS),
     '__DAYS_JSON__': JSON.stringify(days),
     '__ASSIGNED_JSON__': JSON.stringify(assigned),
@@ -42,8 +43,8 @@ function buildPage({ mode, pageTitle, pageH1, days, assigned, outFile }) {
 // PUBLIC — only what's actually been taught/assigned
 buildPage({
   mode: 'public',
-  pageTitle: 'Career Seminar Day Book',
-  pageH1: 'Career Seminar Day Book',
+  pageTitle: 'Career Seminar Course Curriculum',
+  pageH1: 'Career Seminar Course Curriculum',
   days: DAYS.filter(d => d.published),
   assigned: ASSIGNED.filter(a => a.published),
   outFile: 'index.html',
@@ -53,7 +54,7 @@ buildPage({
 buildPage({
   mode: 'planning',
   pageTitle: 'Career Seminar — PLANNING (internal)',
-  pageH1: 'Career Seminar Day Book — PLANNING COPY',
+  pageH1: 'Career Seminar Course Curriculum — PLANNING COPY',
   days: DAYS,
   assigned: ASSIGNED,
   outFile: 'plan.html',

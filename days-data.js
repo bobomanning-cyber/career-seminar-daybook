@@ -22,6 +22,15 @@
    "link goes here" per the site's own footer convention.
    ============================================================ */
 
+const COURSE_OVERVIEW = {
+  paragraph: "This self-directed elective is designed for students who are motivated to explore careers and make informed decisions about their post-secondary path. It provides an opportunity for students to discover their interests and aptitudes and explore careers through interviews, facility tours, job shadow and real world experiences with professionals in fields of interest.",
+  contact: [
+    {label: "Bob Manning"},
+    {label: "Room D220"},
+    {label: "manningr@stillwaterschools.org", href: "mailto:manningr@stillwaterschools.org"}
+  ]
+};
+
 const UNITS = [
   "1 · Intro & Cohort",
   "2 · Employability",
@@ -128,6 +137,8 @@ const DAYS = [
       {t:"Favorite Things #1 — finish what you started in class", when:"Wed Aug 26"}
     ],
     links: [
+      {t:"Favorite Things Activity — my example (backpacking)", u:"https://docs.google.com/document/d/1En9qsmV08ujMjJCtCXWL2jTbeX7ggNHmn689Cc2LFW8/preview"},
+      {t:"Favorite Things worksheet", u:"https://docs.google.com/document/d/1qcOeL3_789Ao2I3HlejaZaYN_wpTLAaihB4Of7YbYDw/copy"},
       {t:"Best / Worst Workday sheet", u:"https://docs.google.com/document/d/1wigZ2OF7IfDHcrk3UHx-47PyG6fbCWc0X_z-WF_JEmk/copy"}
     ],
     missed: "You need your Day 1 loves before you can start. Come in and do the worksheet with a partner — and you can start a workday sheet cold during the survey block."
@@ -144,7 +155,9 @@ const DAYS = [
     due: [
       {t:"Favorite Things #1 — check-off (assigned Monday)", when:"today"}
     ],
-    links: [],
+    links: [
+      {t:"Favorite Things worksheet", u:"https://docs.google.com/document/d/1qcOeL3_789Ao2I3HlejaZaYN_wpTLAaihB4Of7YbYDw/copy"}
+    ],
     missed: "Make up the journal entry and turn in your Favorite Things worksheet. The hall-pass conversation happens one-on-one with me before you get a pass."
   },
   {
@@ -170,7 +183,7 @@ const ASSIGNED = [
   {published: true, assigned:"Thu Aug 20", what:"Three things people come to you for — each labelled good at / like a lot / known for, plus a competency word", due:"Fri Aug 21", where:"Solutions to Gaps + Who Knows You handout", u:"https://docs.google.com/document/d/1mMUU8ICpqyjta65dn_zaCJ9NdKnBSepOL5jzG-c210g/copy"},
   {published: true, assigned:"Thu Aug 20", what:"Start your Who Knows You list", due:"Fri Aug 21", where:"Solutions to Gaps + Who Knows You handout", u:"https://docs.google.com/document/d/1mMUU8ICpqyjta65dn_zaCJ9NdKnBSepOL5jzG-c210g/copy"},
   {published: true, assigned:"Fri Aug 21", what:"Move your names into the Professional Contacts document", due:"Mon Aug 24", where:"Professional Contacts — make your copy", u:"https://docs.google.com/document/d/16AKMNz0kI8voEOYHW44cnoOSRRGOUlRIU8ikYPmUDY0/copy"},
-  {published: true, assigned:"Mon Aug 24", what:"Favorite Things #1 — finish what you started in class", due:"Wed Aug 26", where:"Best / Worst Workday sheet", u:"https://docs.google.com/document/d/1wigZ2OF7IfDHcrk3UHx-47PyG6fbCWc0X_z-WF_JEmk/copy"}
+  {published: true, assigned:"Mon Aug 24", what:"Favorite Things #1 — finish what you started in class", due:"Wed Aug 26", where:"Favorite Things worksheet", u:"https://docs.google.com/document/d/1qcOeL3_789Ao2I3HlejaZaYN_wpTLAaihB4Of7YbYDw/copy"}
 ];
 
 const WEEKS = [
@@ -221,4 +234,4 @@ const RESOURCES = [
   }
 ];
 
-module.exports = { UNITS, DAYS, ASSIGNED, WEEKS, RESOURCES };
+module.exports = { COURSE_OVERVIEW, UNITS, DAYS, ASSIGNED, WEEKS, RESOURCES };

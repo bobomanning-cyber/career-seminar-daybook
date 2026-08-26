@@ -1,4 +1,10 @@
-# Career Seminar Day Book — rebuild handoff
+# Career Seminar Course Curriculum — rebuild handoff
+
+## What changed, Aug 25 (latest round)
+- **Renamed** "Day Book" → **"Course Curriculum"** throughout (page title, H1, nav references).
+- **Course overview section** added just above the nav tabs (non-sticky masthead, sits above the sticky tab bar): first paragraph of the syllabus course description + Bob's contact info. The Remind reference was in the first draft of this and has been **removed** per Bob's request — contact block is now just name, room, email.
+- **Day 5 links**: added **"Favorite Things Activity — my example (backpacking)"** (`/preview` — Bob's own filled/completed copy, not a blank template) alongside the existing worksheet and Best/Worst Workday links.
+- If you haven't pushed the Remind-removal/rename round yet, this push covers both — see the consolidated prompt below.
 
 ## What changed, Aug 25 — planning/public split
 The site is no longer one hand-edited HTML file. It's now generated from a single data file, so there's no way for the public and planning versions to drift apart the way the old site did.

@@ -36,6 +36,35 @@
   html[data-mode="planning"] body{
     background:#fbf1dc;
   }
+  .masthead{
+    max-width:1000px;
+    margin:0 auto;
+    padding:28px 24px 22px 24px;
+  }
+  .masthead h1{
+    margin:0 0 14px 0;
+    font-size:20px;
+    font-weight:600;
+  }
+  .course-overview p{
+    margin:0 0 12px 0;
+    font-size:15px;
+    line-height:1.55;
+    color:#3a3630;
+    max-width:760px;
+  }
+  .course-overview .contact-line{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:12.5px;
+    color:var(--gray);
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px 10px;
+  }
+  .course-overview .contact-line a{
+    color:var(--link);
+    text-decoration:underline;
+  }
   #stickyHeader{
     position:sticky;
     top:0;
@@ -56,13 +85,9 @@
   }
   .topbar{
     background:var(--nav-bg);
+    border-top:1px solid var(--pill-border);
     border-bottom:1px solid var(--pill-border);
-    padding:18px 24px 0 24px;
-  }
-  .topbar h1{
-    margin:0 0 16px 0;
-    font-size:20px;
-    font-weight:600;
+    padding:14px 24px 0 24px;
   }
   .nav{
     display:flex;
@@ -319,10 +344,14 @@
 </head>
 <body>
 
+<header class="masthead">
+  <h1>__PAGE_H1__</h1>
+  <div class="course-overview" id="courseOverview"></div>
+</header>
+
 <div id="stickyHeader">
   <div class="planning-banner">⚠ Planning view — drafts included — not what students see ⚠</div>
   <div class="topbar">
-    <h1>__PAGE_H1__</h1>
     <div class="nav" id="unitNav"></div>
   </div>
 </div>
@@ -371,6 +400,7 @@
    ============================================================ */
 
 const MODE = "__MODE__"; // "public" or "planning"
+const COURSE_OVERVIEW = __COURSE_OVERVIEW_JSON__;
 const UNITS = __UNITS_JSON__;
 const DAYS = __DAYS_JSON__;
 const ASSIGNED = __ASSIGNED_JSON__;
@@ -398,6 +428,16 @@ function inlineLinkHTML(text, u){
   }
   return `<span class="unconnected-text">${esc(text)} — link goes here</span>`;
 }
+
+// course overview
+const overviewEl = document.getElementById('courseOverview');
+const contactHTML = COURSE_OVERVIEW.contact.map(c =>
+  c.href ? `<a href="${esc(c.href)}">${esc(c.label)}</a>` : `<span>${esc(c.label)}</span>`
+).join('<span aria-hidden="true"> · </span>');
+overviewEl.innerHTML = `
+  <p>${esc(COURSE_OVERVIEW.paragraph)}</p>
+  <div class="contact-line">${contactHTML}</div>
+`;
 
 // nav
 const navEl = document.getElementById('unitNav');
