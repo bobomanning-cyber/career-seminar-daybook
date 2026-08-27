@@ -167,18 +167,24 @@ const DAYS = [
   },
   {
     n: 7, date: "Thu Aug 27", type: "BLOCK", block: "83", published: false,
-    title: "Common denominators",
+    title: "Common denominators, mock interviews, and building introductions",
     did: [
-      "The words that repeat across both your activities — that's the finding",
-      "LinkedIn, and the Eve Vang example",
-      "Mock interview using your Favorite Things"
+      "Favorite Things #1 — paired up to fill in missing components before the group discussion",
+      "Employability Skills Assessment and Journal Entry #1 collected — Mr. Manning read through both while you worked",
+      "Favorite Things #1 — common denominators and characteristics, talked through as a group",
+      "Mock interview rotation — practicing real interview questions, using your own Favorite Things as material",
+      "Building introductions — three stops, tied to three employability skills: Communication, Curiosity, Professionalism",
+      "Remaining time: finish Favorite Things #1, start #2"
     ],
-    have: ["Your common-denominator list"],
+    have: ["Employability Skills Assessment, submitted", "Journal #1, submitted", "Favorite Things worksheet #1, further along", "A couple of Favorite Things #2 ideas started"],
     due: [
-      {t:"Unit 2 — Employability Skills — opens Aug 31", when:""}
+      {t:"Favorite Things #2 — same steps, a new favorite thing", when:"Tue Sep 1"}
     ],
-    links: [],
-    missed: "This step needs two finished activities. If you're short one, get it done before Unit 2 — everything after this is built on that list."
+    links: [
+      {t:"Employability Skills Assessment", u:"https://docs.google.com/document/d/1ais2uVUjKcqdHA_VXW-bz-Vy5uasM6Bcbzqt8_wtyxc/copy"},
+      {t:"Favorite Things worksheet", u:"https://docs.google.com/document/d/1qcOeL3_789Ao2I3HlejaZaYN_wpTLAaihB4Of7YbYDw/copy"}
+    ],
+    missed: "Turn in your Employability Skills Assessment and Journal Entry #1 as soon as you're back — both were due Thursday. Favorite Things #1 is still due Monday regardless. Come find me to walk through the mock interview questions and set up your own building introductions."
   }
 ];
 
@@ -189,7 +195,8 @@ const ASSIGNED = [
   {published: true, assigned:"Thu Aug 20", what:"Start your Who Knows You list", due:"Fri Aug 21", where:"Solutions to Gaps + Who Knows You handout", u:"https://docs.google.com/document/d/1mMUU8ICpqyjta65dn_zaCJ9NdKnBSepOL5jzG-c210g/copy"},
   {published: true, assigned:"Fri Aug 21", what:"Move your names into the Professional Contacts document", due:"Mon Aug 24", where:"Professional Contacts — make your copy", u:"https://docs.google.com/document/d/16AKMNz0kI8voEOYHW44cnoOSRRGOUlRIU8ikYPmUDY0/copy"},
   {published: true, assigned:"Mon Aug 24", what:"Favorite Things #1 — finish what you started in class", due:"Mon Aug 31", where:"Favorite Things worksheet", u:"https://docs.google.com/document/d/1qcOeL3_789Ao2I3HlejaZaYN_wpTLAaihB4Of7YbYDw/copy"},
-  {published: true, assigned:"Wed Aug 26", what:"Journal Entry #1 — finish and share with Mr. Manning", due:"Thu Aug 27", where:"Journal for Career Seminar", u:"https://docs.google.com/document/d/1d7rDk7dLS8mayxoI_lEebzi3UqD0KwgF1qWXJyN1CxM/copy"}
+  {published: true, assigned:"Wed Aug 26", what:"Journal Entry #1 — finish and share with Mr. Manning", due:"Thu Aug 27", where:"Journal for Career Seminar", u:"https://docs.google.com/document/d/1d7rDk7dLS8mayxoI_lEebzi3UqD0KwgF1qWXJyN1CxM/copy"},
+  {published: false, assigned:"Thu Aug 27", what:"Favorite Things #2 — same steps, a new favorite thing", due:"Tue Sep 1", where:"Favorite Things worksheet", u:"https://docs.google.com/document/d/1qcOeL3_789Ao2I3HlejaZaYN_wpTLAaihB4Of7YbYDw/copy"}
 ];
 
 const WEEKS = [
