@@ -174,7 +174,7 @@ const DAYS = [
       "Favorite Things #1 — common denominators and characteristics, talked through as a group",
       "Mock interview rotation — practicing real interview questions, using your own Favorite Things as material",
       "Building introductions — three stops, tied to three employability skills: Communication, Curiosity, Professionalism",
-      "Remaining time: finish Favorite Things #1, start #2"
+      "Remaining time: finish Favorite Things #1, start #2 \u2014 and if you\u2019re done with both, open the Careers to Explore tab and start your industries and jobs list"
     ],
     have: ["Employability Skills Assessment, submitted", "Journal #1, submitted", "Favorite Things worksheet #1, finished", "A couple of Favorite Things #2 ideas started"],
     due: [
@@ -182,6 +182,7 @@ const DAYS = [
     ],
     links: [
       {t:"Employability Skills Assessment", u:"https://docs.google.com/document/d/1ais2uVUjKcqdHA_VXW-bz-Vy5uasM6Bcbzqt8_wtyxc/copy"},
+      {t:"Favorite Things \u2014 the full activity (4 tabs)", u:"https://docs.google.com/document/d/1FadCzlPwJGf6q_lgNQ76wo4ca2wWYpbkD6uwKA3_owg/copy"},
       {t:"Favorite Things worksheet", u:"https://docs.google.com/document/d/1qcOeL3_789Ao2I3HlejaZaYN_wpTLAaihB4Of7YbYDw/copy"},
       {t:"Day 7 slides", u:"https://docs.google.com/presentation/d/17c2YHItaUAucSNidjMEdk9k2V-7CUTzH5rybAPVQmvw/preview"}
     ],
