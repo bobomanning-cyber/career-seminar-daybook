@@ -169,24 +169,26 @@ const DAYS = [
     n: 7, date: "Thu Aug 27", type: "BLOCK", block: "83", published: true,
     title: "Common denominators, mock interviews, and building introductions",
     did: [
-      "Favorite Things #1 — paired up to fill in missing components before the group discussion (was due yesterday, finished today)",
-      "Employability Skills Assessment and Journal Entry #1 — due at the start of class, read through as turned in",
-      "Favorite Things #1 — common denominators and characteristics, talked through as a group",
-      "Mock interview rotation — practicing real interview questions, using your own Favorite Things as material",
-      "Building introductions — three stops, tied to three employability skills: Communication, Curiosity, Professionalism",
-      "Remaining time: finish Favorite Things #1, start #2 \u2014 and if you\u2019re done with both, open the Careers to Explore tab and start your industries and jobs list"
+      "Work time first \u2014 Favorite Things #1 and #2, three lanes",
+      "Common denominators \u2014 Ella and Lucy put both of their activities up on the board, and the group found the themes that repeated across them",
+      "Mock interview, in pairs around the room. Round 1: everyone answered \u201cTell me about yourself.\u201d Round 2: one partner rotated, and whoever stayed picked their question",
+      "After every round \u2014 how did it go, how did it feel, did you use your Favorite Things sheet",
+      "Hall pass and building introductions \u2014 who stops you and why, why you introduce yourself first, and how to handle that conversation with empathy",
+      "Out into the building \u2014 Security, Main Office, Media Center, in groups of two or three",
+      "Didn\u2019t get to: the conversation about the \u201cIs it a good fit?\u201d questions. That moves to Monday"
     ],
-    have: ["Employability Skills Assessment, submitted", "Journal #1, submitted", "Favorite Things worksheet #1, finished", "A couple of Favorite Things #2 ideas started"],
+    have: ["Employability Skills Assessment, submitted", "Journal #1, submitted", "Favorite Things #1, finished", "Favorite Things #2, started", "Names from your three building introductions"],
     due: [
-      {t:"Favorite Things #2 — same steps, a new favorite thing", when:"Tue Sep 1"}
+      {t:"Favorite Things #2 \u2014 same steps, a new favorite thing", when:"Mon Aug 31"}
     ],
     links: [
       {t:"Employability Skills Assessment", u:"https://docs.google.com/document/d/1ais2uVUjKcqdHA_VXW-bz-Vy5uasM6Bcbzqt8_wtyxc/copy"},
       {t:"Favorite Things \u2014 the full activity (4 tabs)", u:"https://docs.google.com/document/d/1FadCzlPwJGf6q_lgNQ76wo4ca2wWYpbkD6uwKA3_owg/copy"},
       {t:"Favorite Things worksheet", u:"https://docs.google.com/document/d/1qcOeL3_789Ao2I3HlejaZaYN_wpTLAaihB4Of7YbYDw/copy"},
+      {t:"Professional Contacts \u2014 make your copy", u:"https://docs.google.com/document/d/16AKMNz0kI8voEOYHW44cnoOSRRGOUlRIU8ikYPmUDY0/copy"},
       {t:"Day 7 slides", u:"https://docs.google.com/presentation/d/17c2YHItaUAucSNidjMEdk9k2V-7CUTzH5rybAPVQmvw/preview"}
     ],
-    missed: "Turn in your Employability Skills Assessment and Journal Entry #1 as soon as you're back. Favorite Things #1 was due Wednesday — get it in. Come find me to walk through the mock interview questions and set up your own building introductions."
+    missed: "Turn in your Employability Skills Assessment and Journal Entry #1 as soon as you\u2019re back. Favorite Things #1 was due Wednesday \u2014 get it in, and #2 is due Monday. Come find me to walk through the mock interview questions, and get a hall pass to do your three building introductions."
   }
 ];
 
@@ -198,7 +200,7 @@ const ASSIGNED = [
   {published: true, assigned:"Fri Aug 21", what:"Move your names into the Professional Contacts document", due:"Mon Aug 24", where:"Professional Contacts — make your copy", u:"https://docs.google.com/document/d/16AKMNz0kI8voEOYHW44cnoOSRRGOUlRIU8ikYPmUDY0/copy"},
   {published: true, assigned:"Mon Aug 24", what:"Favorite Things #1 — finish what you started in class", due:"Wed Aug 26", where:"Favorite Things worksheet", u:"https://docs.google.com/document/d/1qcOeL3_789Ao2I3HlejaZaYN_wpTLAaihB4Of7YbYDw/copy"},
   {published: true, assigned:"Wed Aug 26", what:"Journal Entry #1 — finish and share with Mr. Manning", due:"Thu Aug 27", where:"Journal for Career Seminar", u:"https://docs.google.com/document/d/1d7rDk7dLS8mayxoI_lEebzi3UqD0KwgF1qWXJyN1CxM/copy"},
-  {published: true, assigned:"Thu Aug 27", what:"Favorite Things #2 — same steps, a new favorite thing", due:"Tue Sep 1", where:"Favorite Things worksheet", u:"https://docs.google.com/document/d/1qcOeL3_789Ao2I3HlejaZaYN_wpTLAaihB4Of7YbYDw/copy"}
+  {published: true, assigned:"Thu Aug 27", what:"Favorite Things #2 — same steps, a new favorite thing", due:"Mon Aug 31", where:"Favorite Things worksheet", u:"https://docs.google.com/document/d/1qcOeL3_789Ao2I3HlejaZaYN_wpTLAaihB4Of7YbYDw/copy"}
 ];
 
 const WEEKS = [
