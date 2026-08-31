@@ -189,6 +189,28 @@ const DAYS = [
       {t:"Day 7 slides", u:"https://docs.google.com/presentation/d/17c2YHItaUAucSNidjMEdk9k2V-7CUTzH5rybAPVQmvw/preview"}
     ],
     missed: "Turn in your Employability Skills Assessment and Journal Entry #1 as soon as you\u2019re back. Favorite Things #1 was due Wednesday \u2014 get it in, and #2 is due Monday. Come find me to walk through the mock interview questions, and get a hall pass to do your three building introductions."
+  },
+  {
+    n: 8, date: "Mon Aug 31", type: "BLOCK", block: "83", published: true,
+    title: "LinkedIn, Eve Vang, and your SchooLinks profile",
+    did: [
+      "Website check \u2014 what everyone\u2019s screen actually said",
+      "Collected Favorite Things #2",
+      "The \u201cIs it a good fit?\u201d questions, this time as a conversation \u2014 pairs, then swap partners. The move is reacting to what your partner actually said before going to the next question",
+      "LinkedIn \u2014 what it is and why you would have one",
+      "Eve Vang\u2019s profile \u2014 first impressions, then her summary",
+      "Same object, different logo \u2014 your SchooLinks profile is the one in front of people right now",
+      "Work time \u2014 rebuilding the SchooLinks profile off your own descriptors"
+    ],
+    have: ["Favorite Things #2, turned in", "A SchooLinks profile you have started rebuilding in your own words"],
+    due: [],
+    links: [
+      {t:"Day 8 lesson", u:"https://drive.google.com/file/d/1qKT4aPoltUcXrsriYhYwVIqbhMFkY-YX/preview"},
+      {t:"SchooLinks", u:"https://www.schoolinks.com/"},
+      {t:"Favorite Things \u2014 the full activity (4 tabs)", u:"https://docs.google.com/document/d/1FadCzlPwJGf6q_lgNQ76wo4ca2wWYpbkD6uwKA3_owg/copy"},
+      {t:"Professional Contacts \u2014 make your copy", u:"https://docs.google.com/document/d/16AKMNz0kI8voEOYHW44cnoOSRRGOUlRIU8ikYPmUDY0/copy"}
+    ],
+    missed: "Turn in Favorite Things #2. Then open SchooLinks and start rebuilding your profile using the descriptors from your Favorite Things sheets \u2014 not form language, your own words. Come find me and I will show you the LinkedIn example we looked at."
   }
 ];
 
@@ -204,23 +226,23 @@ const ASSIGNED = [
 ];
 
 const WEEKS = [
-  {wk:3, dates:"Aug 31 – Sep 3", unit:"2 — Employability Skills", focus:"Rubric, self-assessment, pick two skills to work on"},
-  {wk:4, dates:"Sep 8 – 11", unit:"3 — Career Exploration", focus:"SchooLinks Career Center, clusters, interest inventory"},
-  {wk:5, dates:"Sep 14 – 18", unit:"3 — Career Exploration", focus:"Ikigai, industry research, resource share"},
-  {wk:6, dates:"Sep 21 – 25", unit:"4 — Technology Literacy", focus:"Email etiquette, calendar, digital conferencing"},
-  {wk:7, dates:"Sep 29 – Oct 1", unit:"4 — Technology Literacy", focus:"AI literacy · Odyssey Plans begin"},
-  {wk:8, dates:"Oct 5 – 9", unit:"4 → 5 Networking", focus:"Odyssey Plans finish · contact list built"},
-  {wk:9, dates:"Oct 12 – 14", unit:"6 — Informational Interviews", focus:"How to prepare, conduct, follow up"},
-  {wk:10, dates:"Oct 21 – 23", unit:"6 — Informational Interviews", focus:"Outreach emails sent"},
-  {wk:11, dates:"Oct 26 – 30", unit:"7 — Independence", focus:"Interview #1 · advisor meetings"},
-  {wk:12, dates:"Nov 2 – 6", unit:"8 — Financial Literacy", focus:"Cost of training, post-secondary money"},
-  {wk:13, dates:"Nov 9 – 13", unit:"7 — Independence", focus:"Interview #2 · LinkedIn-model profile"},
-  {wk:14, dates:"Nov 16 – 20", unit:"9 — Work-Based Learning", focus:"Job shadow, part-time work, internship setup"},
-  {wk:15, dates:"Nov 23", unit:"7 — Independence", focus:"Interview #3 (short week)"},
-  {wk:16, dates:"Nov 30 – Dec 3", unit:"10 — Post-Secondary", focus:"Labor market, salaries, plan draft"},
-  {wk:17, dates:"Dec 7 – 11", unit:"7 — Independence", focus:"Interviews #4 and #5 · résumé export"},
-  {wk:18, dates:"Dec 14 – 18", unit:"11 — Capstone", focus:"Build and rehearse"},
-  {wk:19, dates:"Dec 21 – 22", unit:"11 — Capstone", focus:"Presentations, final journal"}
+  {wk:3, dates:"Aug 31 \u2013 Sep 2", unit:"3 \u2014 Career Exploration", focus:"Find Your Why \u00b7 Ikigai \u00b7 Algebra of Wealth"},
+  {wk:4, dates:"Sep 8 \u2013 10", unit:"3 \u2014 Career Exploration", focus:"SchooLinks Career Center and Career Clusters \u00b7 speed dating"},
+  {wk:5, dates:"Sep 14 \u2013 17", unit:"3 \u2014 Career Exploration", focus:"Industry research \u00b7 project management \u00b7 Odyssey Plan"},
+  {wk:6, dates:"Sep 21 \u2013 24", unit:"4 \u2014 Technology Literacy", focus:"Email etiquette, calendar, digital conferencing"},
+  {wk:7, dates:"Sep 29 \u2013 Oct 1", unit:"4 \u2014 Technology Literacy", focus:"AI literacy \u00b7 build your interview list"},
+  {wk:8, dates:"Oct 5 \u2013 8", unit:"5 \u2014 Networking", focus:"Networking"},
+  {wk:9, dates:"Oct 12 \u2013 14", unit:"6 \u2014 Informational Interviews", focus:"Preparing for interviews \u00b7 mock interviews with outside professionals"},
+  {wk:10, dates:"Oct 21 \u2013 22", unit:"6 \u2192 7", focus:"Outreach emails sent"},
+  {wk:11, dates:"Oct 26 \u2013 29", unit:"7 \u2014 Independence", focus:"Interview #1 \u00b7 Pathways Day Oct 28"},
+  {wk:12, dates:"Nov 2 \u2013 5", unit:"7 \u2014 Independence", focus:"Interview #2"},
+  {wk:13, dates:"Nov 9 \u2013 12", unit:"7 \u2014 Independence", focus:"Interview #3 \u00b7 OSHA 10 introduced"},
+  {wk:14, dates:"Nov 16 \u2013 19", unit:"7 \u2014 Independence", focus:"Interview #4 \u00b7 job shadowing"},
+  {wk:15, dates:"Nov 23", unit:"7 \u2014 Independence", focus:"Interview #5 window opens \u00b7 job shadowing"},
+  {wk:16, dates:"Nov 30 \u2013 Dec 3", unit:"7 \u2014 Independence", focus:"Interview #5 continues \u00b7 financial literacy"},
+  {wk:17, dates:"Dec 7 \u2013 10", unit:"10 \u2014 Post-Secondary Planning", focus:"Interview #5 closes \u00b7 post-secondary plan"},
+  {wk:18, dates:"Dec 14 \u2013 17", unit:"11 \u2014 Capstone", focus:"Build and rehearse \u00b7 first presentation slots"},
+  {wk:19, dates:"Dec 21 \u2013 22", unit:"11 \u2014 Capstone", focus:"Presentations \u00b7 final journal"}
 ];
 
 const RESOURCES = [
