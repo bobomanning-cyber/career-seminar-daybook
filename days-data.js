@@ -195,22 +195,28 @@ const DAYS = [
     title: "LinkedIn, Eve Vang, and your SchooLinks profile",
     did: [
       "Website check \u2014 what everyone\u2019s screen actually said",
-      "Collected Favorite Things #2",
+      "Favorite Things #2 in",
+      "Started a Common Denominators document \u2014 the threads and repeated themes across the things you like and are good at",
       "The \u201cIs it a good fit?\u201d questions, this time as a conversation \u2014 pairs, then swap partners. The move is reacting to what your partner actually said before going to the next question",
-      "LinkedIn \u2014 what it is and why you would have one",
-      "Eve Vang\u2019s profile \u2014 first impressions, then her summary",
-      "Same object, different logo \u2014 your SchooLinks profile is the one in front of people right now",
-      "Work time \u2014 rebuilding the SchooLinks profile off your own descriptors"
+      "LinkedIn \u2014 what it is, why you would have one, and how it is used to build and keep connections",
+      "Eve Vang\u2019s profile \u2014 what is your impression of her, what did you learn about her",
+      "LinkedIn vs SchooLinks \u2014 what will your profile eventually have in common with hers",
+      "Work time \u2014 five SchooLinks assessments, then build them into your profile"
     ],
-    have: ["Favorite Things #2, turned in", "A SchooLinks profile you have started rebuilding in your own words"],
-    due: [],
+    have: ["Favorite Things #2, turned in", "A document called Common Denominators_LastName, started", "Five SchooLinks assessments under way"],
+    due: [
+      {t:"SchooLinks profile \u2014 first draft", when:"end of day Wed Sep 2"},
+      {t:"Employability Skills \u2014 what are you working on this week?", when:"Wed Sep 2"}
+    ],
     links: [
       {t:"Day 8 lesson", u:"https://drive.google.com/file/d/1qKT4aPoltUcXrsriYhYwVIqbhMFkY-YX/preview"},
+      {t:"Day 8 slides", u:"https://docs.google.com/presentation/d/11MYdwPiU-WxucoTusxFAo0OnymQzRM40F-t8Pa2xoNs/preview"},
+      {t:"Employability Skills Assessment", u:"https://docs.google.com/document/d/1ais2uVUjKcqdHA_VXW-bz-Vy5uasM6Bcbzqt8_wtyxc/copy"},
       {t:"SchooLinks", u:"https://www.schoolinks.com/"},
       {t:"Favorite Things \u2014 the full activity (4 tabs)", u:"https://docs.google.com/document/d/1FadCzlPwJGf6q_lgNQ76wo4ca2wWYpbkD6uwKA3_owg/copy"},
       {t:"Professional Contacts \u2014 make your copy", u:"https://docs.google.com/document/d/16AKMNz0kI8voEOYHW44cnoOSRRGOUlRIU8ikYPmUDY0/copy"}
     ],
-    missed: "Turn in Favorite Things #2. Then open SchooLinks and start rebuilding your profile using the descriptors from your Favorite Things sheets \u2014 not form language, your own words. Come find me and I will show you the LinkedIn example we looked at."
+    missed: "Turn in Favorite Things #2. Start a document called Common Denominators_LastName and put the repeated themes from your activities in it. Then open SchooLinks, do the five assessments, and build your profile from them \u2014 use your own descriptors, not form language. Come find me and I will show you the LinkedIn example we looked at."
   }
 ];
 
@@ -222,7 +228,9 @@ const ASSIGNED = [
   {published: true, assigned:"Fri Aug 21", what:"Move your names into the Professional Contacts document", due:"Mon Aug 24", where:"Professional Contacts — make your copy", u:"https://docs.google.com/document/d/16AKMNz0kI8voEOYHW44cnoOSRRGOUlRIU8ikYPmUDY0/copy"},
   {published: true, assigned:"Mon Aug 24", what:"Favorite Things #1 — finish what you started in class", due:"Wed Aug 26", where:"Favorite Things worksheet", u:"https://docs.google.com/document/d/1qcOeL3_789Ao2I3HlejaZaYN_wpTLAaihB4Of7YbYDw/copy"},
   {published: true, assigned:"Wed Aug 26", what:"Journal Entry #1 — finish and share with Mr. Manning", due:"Thu Aug 27", where:"Journal for Career Seminar", u:"https://docs.google.com/document/d/1d7rDk7dLS8mayxoI_lEebzi3UqD0KwgF1qWXJyN1CxM/copy"},
-  {published: true, assigned:"Thu Aug 27", what:"Favorite Things #2 — same steps, a new favorite thing", due:"Mon Aug 31", where:"Favorite Things worksheet", u:"https://docs.google.com/document/d/1qcOeL3_789Ao2I3HlejaZaYN_wpTLAaihB4Of7YbYDw/copy"}
+  {published: true, assigned:"Thu Aug 27", what:"Favorite Things #2 — same steps, a new favorite thing", due:"Mon Aug 31", where:"Favorite Things worksheet", u:"https://docs.google.com/document/d/1qcOeL3_789Ao2I3HlejaZaYN_wpTLAaihB4Of7YbYDw/copy"},
+  {published: true, assigned:"Mon Aug 31", what:"Common Denominators_LastName \u2014 start the document, add the threads that repeat across your activities", due:"Ongoing", where:"Favorite Things \u2014 the full activity (4 tabs)", u:"https://docs.google.com/document/d/1FadCzlPwJGf6q_lgNQ76wo4ca2wWYpbkD6uwKA3_owg/copy"},
+  {published: true, assigned:"Mon Aug 31", what:"SchooLinks profile \u2014 five assessments, then first draft of the profile", due:"Wed Sep 2", where:"SchooLinks", u:"https://www.schoolinks.com/"}
 ];
 
 const WEEKS = [
@@ -265,6 +273,16 @@ const RESOURCES = [
     title:"Syllabus & agreements",
     body:"The 2026-27 syllabus and the Behavior & Transportation Agreement.",
     links:[{t:"Syllabus", u:"https://docs.google.com/document/d/13WcAhgfp-SPksNNkdhfKeb0RcSLrptX2zOta0WoRQUU/preview"}, {t:"Agreement", u:"https://docs.google.com/document/d/1Hq66Yi-fpLeXVj3juUG-PzuSdfvHirqcwCfMw2pSx0c/preview"}]
+  },
+  {
+    title:"Unit 3 \u2014 Career Exploration",
+    body:"Find Your Why, Ikigai, and the reading that argues with both of them.",
+    links:[
+      {t:"Simon Sinek \u2014 How great leaders inspire action", u:"https://youtu.be/nRaqe9M2DYc"},
+      {t:"Ikigai Activity", u:"https://drive.google.com/file/d/1QxLmxufTU9tD0ByslJ6ho2t16O33AjS1/preview"},
+      {t:"Galloway \u2014 Don\u2019t Follow Your Passion, Follow Your Talent", u:"https://medium.com/@profgalloway/the-algebra-of-wealth-dont-follow-your-passion-follow-your-talent-3af23fb96488"},
+      {t:"Galloway \u2014 The Algebra of Wealth (backup, no paywall)", u:"https://www.profgalloway.com/the-algebra-of-wealth/"}
+    ]
   },
   {
     title:"Career search",
