@@ -234,7 +234,7 @@ const DAYS = [
       {t:"Galloway \u2014 Don\u2019t Follow Your Passion, Follow Your Talent", u:"https://medium.com/@profgalloway/the-algebra-of-wealth-dont-follow-your-passion-follow-your-talent-3af23fb96488"},
       {t:"Galloway \u2014 backup copy, no paywall", u:"https://www.profgalloway.com/the-algebra-of-wealth/"},
       {t:"Simon Sinek \u2014 Finding Your Why", u:"https://youtu.be/nRaqe9M2DYc"},
-      {t:"Ikigai Activity", u:"https://drive.google.com/file/d/1QxLmxufTU9tD0ByslJ6ho2t16O33AjS1/preview"},
+      {t:"Ikigai Activity \u2014 make your copy", u:"https://docs.google.com/document/d/1-WIjlz25QuxVrlDNRI27LIyIbdJAQWwJMRwDMnQCNpA/copy"},
       {t:"Journal for Career Seminar", u:"https://docs.google.com/document/d/1d7rDk7dLS8mayxoI_lEebzi3UqD0KwgF1qWXJyN1CxM/copy"},
       {t:"Employability Skills Assessment", u:"https://docs.google.com/document/d/1ais2uVUjKcqdHA_VXW-bz-Vy5uasM6Bcbzqt8_wtyxc/copy"},
       {t:"Day 9 slides", u:"https://docs.google.com/presentation/d/14HddlPBO6P2PTV6fLVhcv8_csgLOvrgzRnZn8Di22qw/preview"}
@@ -304,7 +304,7 @@ const RESOURCES = [
     body:"Find Your Why, Ikigai, and the reading that argues with both of them.",
     links:[
       {t:"Simon Sinek \u2014 How great leaders inspire action", u:"https://youtu.be/nRaqe9M2DYc"},
-      {t:"Ikigai Activity", u:"https://drive.google.com/file/d/1QxLmxufTU9tD0ByslJ6ho2t16O33AjS1/preview"},
+      {t:"Ikigai Activity \u2014 make your copy", u:"https://docs.google.com/document/d/1-WIjlz25QuxVrlDNRI27LIyIbdJAQWwJMRwDMnQCNpA/copy"},
       {t:"Galloway \u2014 Don\u2019t Follow Your Passion, Follow Your Talent", u:"https://medium.com/@profgalloway/the-algebra-of-wealth-dont-follow-your-passion-follow-your-talent-3af23fb96488"},
       {t:"Galloway \u2014 The Algebra of Wealth (backup, no paywall)", u:"https://www.profgalloway.com/the-algebra-of-wealth/"}
     ]
