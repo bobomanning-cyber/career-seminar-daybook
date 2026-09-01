@@ -37,7 +37,7 @@ const UNITS = [
   "3 · Career Exploration",
   "4 · Technology",
   "5 · Networking",
-  "6",
+  "6"
 ];
 
 const DAYS = [
@@ -209,7 +209,6 @@ const DAYS = [
       {t:"Employability Skills \u2014 what are you working on this week?", when:"Wed Sep 2"}
     ],
     links: [
-      {t:"Day 8 lesson", u:"https://drive.google.com/file/d/1qKT4aPoltUcXrsriYhYwVIqbhMFkY-YX/preview"},
       {t:"Day 8 slides", u:"https://docs.google.com/presentation/d/11MYdwPiU-WxucoTusxFAo0OnymQzRM40F-t8Pa2xoNs/preview"},
       {t:"Employability Skills Assessment", u:"https://docs.google.com/document/d/1ais2uVUjKcqdHA_VXW-bz-Vy5uasM6Bcbzqt8_wtyxc/copy"},
       {t:"SchooLinks", u:"https://www.schoolinks.com/"},
@@ -220,18 +219,12 @@ const DAYS = [
   },
   {
     n: 9, date: "Wed Sep 2", type: "BLOCK", block: "83", published: true, plan: true,
-    title: "Ikigai, your why, and what you actually want",
+    title: "Ikigai and finding your why",
     did: [
-      "Website check \u2014 make sure the site loads for everyone",
-      "On paper: which is more important in a career \u2014 money or passion? Answer it and keep the sheet",
-      "\u201cWhat do you want to ______?\u201d \u2014 Do \u00b7 Be \u00b7 Change \u00b7 Make \u00b7 Give, quick write on the same sheet",
-      "Ikigai \u2014 what you love, what you are good at, what the world needs, what you can be paid for",
-      "Simon Sinek, Finding Your Why \u2014 about five minutes",
-      "Where would you place Sinek on the Ikigai chart before he found his why?",
-      "Your own chart \u2014 circle where you are aiming, X where would be ideal, add items to every category",
-      "Trade sheets with a partner and ask the questions that get them to expand"
+      "Website check",
+      "Ikigai and finding your why"
     ],
-    have: ["A sheet with your money-or-passion answer and your five-verb quick write", "Your own Ikigai chart, started"],
+    have: ["Which two Employability Skills you are working on", "Favorite Things #2 completed", "Common Denominators document started"],
     due: [
       {t:"Galloway, \u201cThe Algebra of Wealth\u201d \u2014 what is his argument, and how does he support it?", when:"Tue Sep 8"},
       {t:"Employability Skills", when:"Tue Sep 8"},
@@ -244,10 +237,9 @@ const DAYS = [
       {t:"Ikigai Activity", u:"https://drive.google.com/file/d/1QxLmxufTU9tD0ByslJ6ho2t16O33AjS1/preview"},
       {t:"Journal for Career Seminar", u:"https://docs.google.com/document/d/1d7rDk7dLS8mayxoI_lEebzi3UqD0KwgF1qWXJyN1CxM/copy"},
       {t:"Employability Skills Assessment", u:"https://docs.google.com/document/d/1ais2uVUjKcqdHA_VXW-bz-Vy5uasM6Bcbzqt8_wtyxc/copy"},
-      {t:"Day 9 lesson", u:"https://drive.google.com/file/d/1QnDaew-bSoVgZ6dEHjErL2MLEG45EM-d/preview"},
       {t:"Day 9 slides", u:"https://docs.google.com/presentation/d/14HddlPBO6P2PTV6fLVhcv8_csgLOvrgzRnZn8Di22qw/preview"}
     ],
-    missed: "Get a sheet of paper and answer this: which is more important in a career, money or passion? Then do the Ikigai chart \u2014 the activity is linked above, and the four categories are what you love, what you are good at, what the world needs, and what you can be paid for. Watch the Sinek video. Then read the Galloway article and answer the two questions. Come find me and we will do the partner round."
+    missed: "Watch the Simon Sinek \u201cWhy\u201d video and do the Ikigai chart."
   }
 ];
 
