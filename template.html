@@ -482,7 +482,7 @@ DAYS.forEach(d => {
       </div>
       <h3 class="day-title">${esc(d.title)}</h3>
       <div class="row">
-        <div class="k">What we did</div>
+        <div class="k">Agenda</div>
         <ul>${didHTML}</ul>
       </div>
       <div class="row">
@@ -490,11 +490,11 @@ DAYS.forEach(d => {
         <div class="badges">${haveHTML}</div>
       </div>
       <div class="row">
-        <div class="k">Assigned</div>
+        <div class="k">Due</div>
         <ul>${dueHTML}</ul>
       </div>
       ${linksRow}
-      <div class="missed"><span class="lbl">Missed this day</span>${esc(d.missed)}</div>
+      <div class="missed"><span class="lbl">Missed</span>${esc(d.missed)}</div>
     </div>
   `;
   cardsEl.appendChild(card);

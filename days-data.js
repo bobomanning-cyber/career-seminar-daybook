@@ -217,6 +217,37 @@ const DAYS = [
       {t:"Professional Contacts \u2014 make your copy", u:"https://docs.google.com/document/d/16AKMNz0kI8voEOYHW44cnoOSRRGOUlRIU8ikYPmUDY0/copy"}
     ],
     missed: "Turn in Favorite Things #2. Start a document called Common Denominators_LastName and put the repeated themes from your activities in it. Then open SchooLinks, do the five assessments, and build your profile from them \u2014 use your own descriptors, not form language. Come find me and I will show you the LinkedIn example we looked at."
+  },
+  {
+    n: 9, date: "Wed Sep 2", type: "BLOCK", block: "83", published: true, plan: true,
+    title: "Ikigai, your why, and what you actually want",
+    did: [
+      "Website check \u2014 make sure the site loads for everyone",
+      "On paper: which is more important in a career \u2014 money or passion? Answer it and keep the sheet",
+      "\u201cWhat do you want to ______?\u201d \u2014 Do \u00b7 Be \u00b7 Change \u00b7 Make \u00b7 Give, quick write on the same sheet",
+      "Ikigai \u2014 what you love, what you are good at, what the world needs, what you can be paid for",
+      "Simon Sinek, Finding Your Why \u2014 about five minutes",
+      "Where would you place Sinek on the Ikigai chart before he found his why?",
+      "Your own chart \u2014 circle where you are aiming, X where would be ideal, add items to every category",
+      "Trade sheets with a partner and ask the questions that get them to expand"
+    ],
+    have: ["A sheet with your money-or-passion answer and your five-verb quick write", "Your own Ikigai chart, started"],
+    due: [
+      {t:"Galloway, \u201cThe Algebra of Wealth\u201d \u2014 what is his argument, and how does he support it?", when:"Tue Sep 8"},
+      {t:"Employability Skills", when:"Tue Sep 8"},
+      {t:"Journal Entry #2 \u2014 \u201clearn\u201d means in this class or related to your future", when:"Tue Sep 8"}
+    ],
+    links: [
+      {t:"Galloway \u2014 Don\u2019t Follow Your Passion, Follow Your Talent", u:"https://medium.com/@profgalloway/the-algebra-of-wealth-dont-follow-your-passion-follow-your-talent-3af23fb96488"},
+      {t:"Galloway \u2014 backup copy, no paywall", u:"https://www.profgalloway.com/the-algebra-of-wealth/"},
+      {t:"Simon Sinek \u2014 Finding Your Why", u:"https://youtu.be/nRaqe9M2DYc"},
+      {t:"Ikigai Activity", u:"https://drive.google.com/file/d/1QxLmxufTU9tD0ByslJ6ho2t16O33AjS1/preview"},
+      {t:"Journal for Career Seminar", u:"https://docs.google.com/document/d/1d7rDk7dLS8mayxoI_lEebzi3UqD0KwgF1qWXJyN1CxM/copy"},
+      {t:"Employability Skills Assessment", u:"https://docs.google.com/document/d/1ais2uVUjKcqdHA_VXW-bz-Vy5uasM6Bcbzqt8_wtyxc/copy"},
+      {t:"Day 9 lesson", u:"https://drive.google.com/file/d/1QnDaew-bSoVgZ6dEHjErL2MLEG45EM-d/preview"},
+      {t:"Day 9 slides", u:"https://docs.google.com/presentation/d/14HddlPBO6P2PTV6fLVhcv8_csgLOvrgzRnZn8Di22qw/preview"}
+    ],
+    missed: "Get a sheet of paper and answer this: which is more important in a career, money or passion? Then do the Ikigai chart \u2014 the activity is linked above, and the four categories are what you love, what you are good at, what the world needs, and what you can be paid for. Watch the Sinek video. Then read the Galloway article and answer the two questions. Come find me and we will do the partner round."
   }
 ];
 
@@ -230,7 +261,9 @@ const ASSIGNED = [
   {published: true, assigned:"Wed Aug 26", what:"Journal Entry #1 — finish and share with Mr. Manning", due:"Thu Aug 27", where:"Journal for Career Seminar", u:"https://docs.google.com/document/d/1d7rDk7dLS8mayxoI_lEebzi3UqD0KwgF1qWXJyN1CxM/copy"},
   {published: true, assigned:"Thu Aug 27", what:"Favorite Things #2 — same steps, a new favorite thing", due:"Mon Aug 31", where:"Favorite Things worksheet", u:"https://docs.google.com/document/d/1qcOeL3_789Ao2I3HlejaZaYN_wpTLAaihB4Of7YbYDw/copy"},
   {published: true, assigned:"Mon Aug 31", what:"Common Denominators_LastName \u2014 start the document, add the threads that repeat across your activities", due:"Ongoing", where:"Favorite Things \u2014 the full activity (4 tabs)", u:"https://docs.google.com/document/d/1FadCzlPwJGf6q_lgNQ76wo4ca2wWYpbkD6uwKA3_owg/copy"},
-  {published: true, assigned:"Mon Aug 31", what:"SchooLinks profile \u2014 five assessments, then first draft of the profile", due:"Wed Sep 2", where:"SchooLinks", u:"https://www.schoolinks.com/"}
+  {published: true, assigned:"Mon Aug 31", what:"SchooLinks profile \u2014 five assessments, then first draft of the profile", due:"Wed Sep 2", where:"SchooLinks", u:"https://www.schoolinks.com/"},
+  {published: true, assigned:"Wed Sep 2", what:"Galloway, \u201cThe Algebra of Wealth\u201d \u2014 what is his argument, and how does he support it?", due:"Tue Sep 8", where:"Galloway \u2014 the article", u:"https://medium.com/@profgalloway/the-algebra-of-wealth-dont-follow-your-passion-follow-your-talent-3af23fb96488"},
+  {published: true, assigned:"Wed Sep 2", what:"Journal Entry #2 \u2014 \u201clearn\u201d means in this class or related to your future", due:"Tue Sep 8", where:"Journal for Career Seminar", u:"https://docs.google.com/document/d/1d7rDk7dLS8mayxoI_lEebzi3UqD0KwgF1qWXJyN1CxM/copy"}
 ];
 
 const WEEKS = [
