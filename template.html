@@ -131,6 +131,78 @@
     border-style:dashed;
     background:var(--draft-bg);
   }
+  .fold-header{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:11px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--gray-light);
+    margin:34px 0 12px 0;
+  }
+  .day-fold{
+    border:1px solid var(--pill-border);
+    border-radius:10px;
+    background:#fffdf9;
+    margin-bottom:10px;
+  }
+  .day-fold.is-draft{
+    border-color:var(--draft-color-soft);
+    border-style:dashed;
+    background:var(--draft-bg);
+  }
+  .day-fold[open]{
+    border:none;
+    background:transparent;
+    margin-bottom:22px;
+  }
+  .day-fold summary{
+    cursor:pointer;
+    list-style:none;
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    padding:14px 20px;
+  }
+  .day-fold summary::-webkit-details-marker{display:none;}
+  .day-fold summary:hover{background:var(--pill-bg);border-radius:9px;}
+  .day-fold[open] summary{
+    border:1px solid var(--pill-border);
+    border-radius:9px;
+    margin-bottom:10px;
+  }
+  .fold-n{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    color:var(--border-red);
+    flex:0 0 auto;
+  }
+  .fold-date{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:12.5px;
+    color:var(--gray);
+    flex:0 0 auto;
+  }
+  .fold-title{
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:16px;
+    color:var(--ink);
+    flex:1 1 auto;
+    min-width:0;
+  }
+  .fold-chev{
+    color:var(--gray-light);
+    font-size:12px;
+    flex:0 0 auto;
+  }
+  .day-fold[open] .fold-chev{transform:rotate(180deg);display:inline-block;}
+  .day-fold .day-card{margin-bottom:0;}
+  @media (max-width:640px){
+    .day-fold summary{flex-wrap:wrap;gap:6px 12px;}
+    .fold-title{flex:1 0 100%;}
+  }
   .day-num{
     flex:0 0 70px;
     text-align:center;
@@ -448,12 +520,13 @@ UNITS.forEach((u, i) => {
   navEl.appendChild(b);
 });
 
-// day cards
+// day cards — newest first, older days collapsed
 const cardsEl = document.getElementById('dayCards');
-DAYS.forEach(d => {
-  const card = document.createElement('div');
+const OPEN_COUNT = 2;
+const orderedDays = DAYS.slice().reverse();
+
+orderedDays.forEach((d, i) => {
   const isDraft = MODE === "planning" && !d.published;
-  card.className = 'day-card' + (isDraft ? ' is-draft' : '');
 
   const dueHTML = d.due.map(x => {
     const when = x.when ? ` — <span style="color:var(--gray-light)">due ${esc(x.when)}</span>` : "";
@@ -469,7 +542,7 @@ DAYS.forEach(d => {
       </div>` : "";
   const draftRibbon = isDraft ? `<span class="draft-ribbon">Draft — not yet taught</span>` : "";
 
-  card.innerHTML = `
+  const cardInner = `
     <div class="day-num">
       <div class="n">${d.n}</div>
       <div class="lbl">Day</div>
@@ -497,7 +570,34 @@ DAYS.forEach(d => {
       <div class="missed"><span class="lbl">Missed</span>${esc(d.missed)}</div>
     </div>
   `;
-  cardsEl.appendChild(card);
+
+  if (i < OPEN_COUNT) {
+    const card = document.createElement('div');
+    card.className = 'day-card' + (isDraft ? ' is-draft' : '');
+    card.innerHTML = cardInner;
+    cardsEl.appendChild(card);
+    return;
+  }
+
+  if (i === OPEN_COUNT) {
+    const hdr = document.createElement('div');
+    hdr.className = 'fold-header';
+    hdr.textContent = 'Earlier days — click one to open it';
+    cardsEl.appendChild(hdr);
+  }
+
+  const fold = document.createElement('details');
+  fold.className = 'day-fold' + (isDraft ? ' is-draft' : '');
+  fold.innerHTML = `
+    <summary>
+      <span class="fold-n">Day ${d.n}</span>
+      <span class="fold-date">${esc(d.date)}</span>
+      <span class="fold-title">${esc(d.title)}</span>
+      <span class="fold-chev" aria-hidden="true">▾</span>
+    </summary>
+    <div class="day-card${isDraft ? ' is-draft' : ''}">${cardInner}</div>
+  `;
+  cardsEl.appendChild(fold);
 });
 
 // assigned table
