@@ -239,6 +239,21 @@ const DAYS = [
       {t:"Day 9 slides", u:"https://docs.google.com/presentation/d/14HddlPBO6P2PTV6fLVhcv8_csgLOvrgzRnZn8Di22qw/preview"}
     ],
     missed: "Watch the Simon Sinek \u201cWhy\u201d video and do the Ikigai chart."
+  },
+  {
+    n: 10, date: "Tue Sep 8", type: "BLOCK", block: "83", published: false, plan: true,
+    title: "The Galloway debate and the Career Center",
+    did: [
+      "Galloway debate \u2014 assigned sides, then where you actually stand",
+      "What is expected in this class",
+      "SchooLinks Career Center and Career Clusters"
+    ],
+    have: ["Galloway read, with both questions answered", "Employability Skills turned in", "Journal Entry #2 turned in"],
+    due: [],
+    links: [
+      {t:"SchooLinks", u:"https://www.schoolinks.com/"}
+    ],
+    missed: "Read Galloway and answer both questions. Then open the SchooLinks Career Center, start in Career Clusters, and keep adding to your Common Denominators document."
   }
 ];
 
