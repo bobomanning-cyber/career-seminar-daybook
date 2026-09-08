@@ -250,8 +250,13 @@ const DAYS = [
     ],
     have: ["Galloway read \u2014 his argument and how he supports it", "Employability Skills turned in", "Journal Entry #2 turned in", "A Common Denominators document started"],
     due: [
-      {t:"Journal Entry #3 \u2014 plus one more item: three careers I am interested in exploring, and why", when:"Wed Sep 9"},
-      {t:"Overdue work \u2014 come talk to me about it", when:"Wed Sep 9"}
+      {t:"Favorite Things #1 and #2 \u2014 completed", when:"Mon Sep 14"},
+      {t:"Ikigai \u2014 completed", when:"Mon Sep 14"},
+      {t:"Common Denominators \u2014 6\u201310 things", when:"Mon Sep 14"},
+      {t:"SchooLinks assessments \u2014 all five that were assigned", when:"Mon Sep 14"},
+      {t:"3 saved careers in SchooLinks, with the information from the Career Clusters activity", when:"Mon Sep 14"},
+      {t:"SchooLinks profile \u2014 first draft", when:"Mon Sep 14"},
+      {t:"Journal #3 \u2014 the standard questions, plus a summary of the three careers you decided to explore and why", when:"Mon Sep 14"}
     ],
     links: [
       {t:"Day 10 slides", u:"https://docs.google.com/presentation/d/10BJLVM9Tr8bh282PBozSoE64RIKHHPsLAV3W0gkPEBk/preview"},
