@@ -241,19 +241,24 @@ const DAYS = [
     missed: "Watch the Simon Sinek \u201cWhy\u201d video and do the Ikigai chart."
   },
   {
-    n: 10, date: "Tue Sep 8", type: "BLOCK", block: "83", published: false, plan: true,
-    title: "The Galloway debate and the Career Center",
+    n: 10, date: "Tue Sep 8", type: "BLOCK", block: "83", published: true, plan: true,
+    title: "Debate: money or passion, and the Career Center",
     did: [
-      "Galloway debate \u2014 assigned sides, then where you actually stand",
-      "What is expected in this class",
+      "Galloway debate \u2014 money or passion",
+      "Protocol and expectations for this class",
       "SchooLinks Career Center and Career Clusters"
     ],
-    have: ["Galloway read, with both questions answered", "Employability Skills turned in", "Journal Entry #2 turned in"],
-    due: [],
+    have: ["Galloway read \u2014 his argument and how he supports it", "Employability Skills turned in", "Journal Entry #2 turned in", "A Common Denominators document started"],
+    due: [
+      {t:"Journal Entry #3 \u2014 plus one more item: three careers I am interested in exploring, and why", when:"Wed Sep 9"},
+      {t:"Overdue work \u2014 come talk to me about it", when:"Wed Sep 9"}
+    ],
     links: [
+      {t:"Day 10 slides", u:"https://docs.google.com/presentation/d/10BJLVM9Tr8bh282PBozSoE64RIKHHPsLAV3W0gkPEBk/preview"},
+      {t:"Galloway \u2014 The Algebra of Wealth (Medium)", u:"https://medium.com/@profgalloway/the-algebra-of-wealth-dont-follow-your-passion-follow-your-talent-3af23fb96488"},
       {t:"SchooLinks", u:"https://www.schoolinks.com/"}
     ],
-    missed: "Read Galloway and answer both questions. Then open the SchooLinks Career Center, start in Career Clusters, and keep adding to your Common Denominators document."
+    missed: "Read Galloway and answer both questions. Open the SchooLinks Career Center and choose a cluster \u2014 find the salary, education, Q&A and outlook, and start saving jobs. Create a Common Denominators document if you do not have one yet, and keep adding to it."
   }
 ];
 
