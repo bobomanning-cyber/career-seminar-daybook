@@ -135,7 +135,14 @@ const DAYS = [
     ],
     have: ["Favorite Things worksheet #1, started", "Workday sheet, still in progress"],
     due: [
-      {t:"Favorite Things #1 — finish what you started in class", when:"Wed Aug 26"}
+      {t:"Favorite Things #1-2 \u2014 completed", when:"September 14th"},
+      {t:"Ikigai \u2014 completed", when:"September 14th"},
+      {t:"3 saved careers in SchooLinks", when:"September 14th"},
+      {t:"SchooLinks assessments: Find your path, Would you rather, Top skills, Learning style, Student focus", when:"September 14th"},
+      {t:"First draft of SchooLinks profile", when:"September 14th"},
+      {t:"Common denominators - 10 traits that show up in your interests, skills, etc.", when:"September 14th"},
+      {t:"Journal #3", when:"September 14th"},
+      {t:"Overdue work", when:"September 14th"}
     ],
     links: [
       {t:"Favorite Things Activity — my example (backpacking)", u:"https://docs.google.com/document/d/1En9qsmV08ujMjJCtCXWL2jTbeX7ggNHmn689Cc2LFW8/preview"},
