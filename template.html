@@ -139,6 +139,17 @@
     color:var(--gray-light);
     margin:34px 0 12px 0;
   }
+  .unit-heading{
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:22px;
+    color:var(--ink);
+    margin:48px 0 16px 0;
+    padding-bottom:8px;
+    border-bottom:2px solid var(--border-red);
+  }
+  .unit-heading:first-child{
+    margin-top:0;
+  }
   .day-fold{
     border:1px solid var(--pill-border);
     border-radius:10px;
@@ -511,94 +522,122 @@ overviewEl.innerHTML = `
   <div class="contact-line">${contactHTML}</div>
 `;
 
-// nav
+// nav — clicking a unit shows only that unit's days
 const navEl = document.getElementById('unitNav');
+const navButtons = [];
 UNITS.forEach((u, i) => {
   const b = document.createElement('button');
   b.textContent = u;
-  if(i === 0) b.classList.add('active');
+  b.addEventListener('click', () => {
+    navButtons.forEach(btn => btn.classList.remove('active'));
+    b.classList.add('active');
+    renderDayCards(i);
+  });
   navEl.appendChild(b);
+  navButtons.push(b);
 });
 
-// day cards — newest first, older days collapsed
+// day cards — only the selected unit's days, newest first, older days collapsed
 const cardsEl = document.getElementById('dayCards');
 const OPEN_COUNT = 2;
-const orderedDays = DAYS.slice().reverse();
 
-orderedDays.forEach((d, i) => {
-  const isDraft = MODE === "planning" && !d.published;
+function renderDayCards(unitIndex) {
+  cardsEl.innerHTML = '';
 
-  const dueHTML = d.due.map(x => {
-    const when = x.when ? ` — <span style="color:var(--gray-light)">due ${esc(x.when)}</span>` : "";
-    return `<li>${esc(x.t)}${when}</li>`;
-  }).join("");
+  const heading = document.createElement('h3');
+  heading.className = 'unit-heading';
+  heading.textContent = UNITS[unitIndex] || ('Unit ' + unitIndex);
+  cardsEl.appendChild(heading);
 
-  const haveHTML = d.have.map(h => `<span class="badge">${esc(h)}</span>`).join("");
-  const didHTML = d.did.map(x => `<li>${esc(x)}</li>`).join("");
-  const linksRow = d.links.length ? `
-      <div class="row">
-        <div class="k">Links</div>
-        <div class="links">${d.links.map(linkPillHTML).join("")}</div>
-      </div>` : "";
-  const draftRibbon = isDraft ? `<span class="draft-ribbon">Draft — not yet taught</span>` : "";
+  const unitDays = DAYS.filter(d => d.unit === unitIndex).slice().reverse();
 
-  const cardInner = `
-    <div class="day-num">
-      <div class="n">${d.n}</div>
-      <div class="lbl">Day</div>
-    </div>
-    <div class="day-body">
-      <div class="day-meta">
-        <span class="date">${esc(d.date)}</span>
-        <span class="tag ${d.type === 'BLOCK' ? 'block' : ''}">${esc(d.type)} · ${esc(d.block)}</span>
-        ${draftRibbon}
-      </div>
-      <h3 class="day-title">${esc(d.title)}</h3>
-      <div class="row">
-        <div class="k">Agenda</div>
-        <ul>${didHTML}</ul>
-      </div>
-      <div class="row">
-        <div class="k">You should have</div>
-        <div class="badges">${haveHTML}</div>
-      </div>
-      <div class="row">
-        <div class="k">Due</div>
-        <ul>${dueHTML}</ul>
-      </div>
-      ${linksRow}
-      <div class="missed"><span class="lbl">Missed</span>${esc(d.missed)}</div>
-    </div>
-  `;
-
-  if (i < OPEN_COUNT) {
-    const card = document.createElement('div');
-    card.className = 'day-card' + (isDraft ? ' is-draft' : '');
-    card.innerHTML = cardInner;
-    cardsEl.appendChild(card);
+  if (unitDays.length === 0) {
+    const empty = document.createElement('p');
+    empty.className = 'section-sub';
+    empty.textContent = 'Nothing published for this unit yet.';
+    cardsEl.appendChild(empty);
     return;
   }
 
-  if (i === OPEN_COUNT) {
-    const hdr = document.createElement('div');
-    hdr.className = 'fold-header';
-    hdr.textContent = 'Earlier days — click one to open it';
-    cardsEl.appendChild(hdr);
-  }
+  unitDays.forEach((d, i) => {
+    const isDraft = MODE === "planning" && !d.published;
 
-  const fold = document.createElement('details');
-  fold.className = 'day-fold' + (isDraft ? ' is-draft' : '');
-  fold.innerHTML = `
-    <summary>
-      <span class="fold-n">Day ${d.n}</span>
-      <span class="fold-date">${esc(d.date)}</span>
-      <span class="fold-title">${esc(d.title)}</span>
-      <span class="fold-chev" aria-hidden="true">▾</span>
-    </summary>
-    <div class="day-card${isDraft ? ' is-draft' : ''}">${cardInner}</div>
-  `;
-  cardsEl.appendChild(fold);
-});
+    const dueHTML = d.due.map(x => {
+      const when = x.when ? ` — <span style="color:var(--gray-light)">due ${esc(x.when)}</span>` : "";
+      return `<li>${esc(x.t)}${when}</li>`;
+    }).join("");
+
+    const haveHTML = d.have.map(h => `<span class="badge">${esc(h)}</span>`).join("");
+    const didHTML = d.did.map(x => `<li>${esc(x)}</li>`).join("");
+    const linksRow = d.links.length ? `
+        <div class="row">
+          <div class="k">Links</div>
+          <div class="links">${d.links.map(linkPillHTML).join("")}</div>
+        </div>` : "";
+    const draftRibbon = isDraft ? `<span class="draft-ribbon">Draft — not yet taught</span>` : "";
+
+    const cardInner = `
+      <div class="day-num">
+        <div class="n">${d.n}</div>
+        <div class="lbl">Day</div>
+      </div>
+      <div class="day-body">
+        <div class="day-meta">
+          <span class="date">${esc(d.date)}</span>
+          <span class="tag ${d.type === 'BLOCK' ? 'block' : ''}">${esc(d.type)} · ${esc(d.block)}</span>
+          ${draftRibbon}
+        </div>
+        <h3 class="day-title">${esc(d.title)}</h3>
+        <div class="row">
+          <div class="k">Agenda</div>
+          <ul>${didHTML}</ul>
+        </div>
+        <div class="row">
+          <div class="k">You should have</div>
+          <div class="badges">${haveHTML}</div>
+        </div>
+        <div class="row">
+          <div class="k">Due</div>
+          <ul>${dueHTML}</ul>
+        </div>
+        ${linksRow}
+        <div class="missed"><span class="lbl">Missed</span>${esc(d.missed)}</div>
+      </div>
+    `;
+
+    if (i < OPEN_COUNT) {
+      const card = document.createElement('div');
+      card.className = 'day-card' + (isDraft ? ' is-draft' : '');
+      card.innerHTML = cardInner;
+      cardsEl.appendChild(card);
+      return;
+    }
+
+    if (i === OPEN_COUNT) {
+      const hdr = document.createElement('div');
+      hdr.className = 'fold-header';
+      hdr.textContent = 'Earlier days — click one to open it';
+      cardsEl.appendChild(hdr);
+    }
+
+    const fold = document.createElement('details');
+    fold.className = 'day-fold' + (isDraft ? ' is-draft' : '');
+    fold.innerHTML = `
+      <summary>
+        <span class="fold-n">Day ${d.n}</span>
+        <span class="fold-date">${esc(d.date)}</span>
+        <span class="fold-title">${esc(d.title)}</span>
+        <span class="fold-chev" aria-hidden="true">▾</span>
+      </summary>
+      <div class="day-card${isDraft ? ' is-draft' : ''}">${cardInner}</div>
+    `;
+    cardsEl.appendChild(fold);
+  });
+}
+
+const defaultUnit = DAYS.length ? DAYS[DAYS.length - 1].unit : 0;
+if (navButtons[defaultUnit]) navButtons[defaultUnit].classList.add('active');
+renderDayCards(defaultUnit);
 
 // assigned table
 const assignedBody = document.getElementById('assignedBody');

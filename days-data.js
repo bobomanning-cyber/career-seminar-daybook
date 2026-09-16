@@ -32,17 +32,17 @@ const COURSE_OVERVIEW = {
 };
 
 const UNITS = [
-  "1 · Intro & Cohort",
-  "2 · Employability",
-  "3 · Career Exploration",
-  "4 · Technology",
-  "5 · Networking",
+  "1 · Intro & Employability Skills",
+  "2 · Career Exploration",
+  "3 · Tech Literacy",
+  "4 · Networking",
+  "5 · Informational Interviews",
   "6"
 ];
 
 const DAYS = [
   {
-    n: 1, date: "Tue Aug 18", type: "ALL", block: "45", published: true,
+    n: 1, unit: 0, date: "Tue Aug 18", type: "ALL", block: "45", published: true,
     title: "Love / Hate, and what this class is",
     did: [
       "Love/Hate — three things you love doing, three you can't stand",
@@ -63,7 +63,7 @@ const DAYS = [
     missed: "Write your own Love/Hate sheet — three and three. Pick up the agreement, your pass and the Remind code, then come find me for the one-on-one check-in."
   },
   {
-    n: 2, date: "Wed Aug 19", type: "ALL", block: "45", published: true,
+    n: 2, unit: 0, date: "Wed Aug 19", type: "ALL", block: "45", published: true,
     title: "The four job-launch gaps",
     did: [
       "Vocabulary: pain point · entry-level job · aspiration · career ladder · social capital",
@@ -84,7 +84,7 @@ const DAYS = [
     missed: "Read the article and get the five terms. Fill in the Where Do I Stand? sheet — then find a partner before the Four Corners activity so you hear all four gaps out loud."
   },
   {
-    n: 3, date: "Thu Aug 20", type: "ALL", block: "45", published: true,
+    n: 3, unit: 0, date: "Thu Aug 20", type: "ALL", block: "45", published: true,
     title: "Solutions to gaps",
     did: [
       "Four Corners — the room taught all four gaps",
@@ -104,7 +104,7 @@ const DAYS = [
     missed: "Get the Solutions to Gaps handout — Who Knows You is on the back. The posters are still on the wall, so come read them, then do both homework pieces."
   },
   {
-    n: 4, date: "Fri Aug 21", type: "ALL", block: "45", published: true,
+    n: 4, unit: 0, date: "Fri Aug 21", type: "ALL", block: "45", published: true,
     title: "Who knows you, and the workday you want",
     did: [
       "Competency words — the group named the word for each of you",
@@ -125,7 +125,7 @@ const DAYS = [
     missed: "The Who Knows You sheet needs a partner for the trading round — the two counts mean nothing filled in alone. Grab a partner at lunch — Monday's survey block is built for catching this up."
   },
   {
-    n: 5, date: "Mon Aug 24", type: "BLOCK", block: "83", published: true,
+    n: 5, unit: 0, date: "Mon Aug 24", type: "BLOCK", block: "83", published: true,
     title: "Favorite Things",
     did: [
       "Quick survey — where everyone got to on the workday sheet",
@@ -153,7 +153,7 @@ const DAYS = [
     missed: "You need your Day 1 loves before you can start. Come in and do the worksheet with a partner — and you can start a workday sheet cold during the survey block."
   },
   {
-    n: 6, date: "Wed Aug 26", type: "ALL", block: "45", published: true,
+    n: 6, unit: 0, date: "Wed Aug 26", type: "ALL", block: "45", published: true,
     title: "Employability skills, and Journal #1",
     did: [
       "Employability Skills — what employers want, first look at the assessment, two self-assessments",
@@ -173,7 +173,7 @@ const DAYS = [
     missed: "Do the Employability Skills self-assessment on your own — pick two skills, score yourself, one example each. Finish the Journal #1 entry and share it with me, due Thursday same as everyone else. Favorite Things and building introductions haven't happened for the class yet either — you're not behind on those."
   },
   {
-    n: 7, date: "Thu Aug 27", type: "BLOCK", block: "83", published: true,
+    n: 7, unit: 0, date: "Thu Aug 27", type: "BLOCK", block: "83", published: true,
     title: "Common denominators, mock interviews, and building introductions",
     did: [
       "Work time first \u2014 Favorite Things #1 and #2, three lanes",
@@ -198,7 +198,7 @@ const DAYS = [
     missed: "Turn in your Employability Skills Assessment and Journal Entry #1 as soon as you\u2019re back. Favorite Things #1 was due Wednesday \u2014 get it in, and #2 is due Monday. Come find me to walk through the mock interview questions, and get a hall pass to do your three building introductions."
   },
   {
-    n: 8, date: "Mon Aug 31", type: "BLOCK", block: "83", published: true,
+    n: 8, unit: 0, date: "Mon Aug 31", type: "BLOCK", block: "83", published: true,
     title: "LinkedIn, Eve Vang, and your SchooLinks profile",
     did: [
       "Website check \u2014 what everyone\u2019s screen actually said",
@@ -225,7 +225,7 @@ const DAYS = [
     missed: "Turn in Favorite Things #2. Start a document called Common Denominators_LastName and put the repeated themes from your activities in it. Then open SchooLinks, do the five assessments, and build your profile from them \u2014 use your own descriptors, not form language. Come find me and I will show you the LinkedIn example we looked at."
   },
   {
-    n: 9, date: "Wed Sep 2", type: "BLOCK", block: "83", published: true, plan: true,
+    n: 9, unit: 1, date: "Wed Sep 2", type: "BLOCK", block: "83", published: true, plan: true,
     title: "Ikigai and finding your why",
     did: [
       "Website check",
@@ -248,7 +248,7 @@ const DAYS = [
     missed: "Watch the Simon Sinek \u201cWhy\u201d video and do the Ikigai chart."
   },
   {
-    n: 10, date: "Tue Sep 8", type: "BLOCK", block: "83", published: true, plan: true,
+    n: 10, unit: 1, date: "Tue Sep 8", type: "BLOCK", block: "83", published: true, plan: true,
     title: "Debate: money or passion, and the Career Center",
     did: [
       "Galloway debate \u2014 money or passion",
@@ -273,7 +273,7 @@ const DAYS = [
     missed: "Read Galloway and answer both questions. Open the SchooLinks Career Center and choose a cluster \u2014 find the salary, education, Q&A and outlook, and start saving jobs. Create a Common Denominators document if you do not have one yet, and keep adding to it."
   },
   {
-    n: 11, date: "Mon Sep 14", type: "BLOCK", block: "83", published: true,
+    n: 11, unit: 1, date: "Mon Sep 14", type: "BLOCK", block: "83", published: true,
     title: "Odyssey Plans \u2014 introduction",
     did: [
       "Michael Horn\u2019s LinkedIn post \u2014 the one-path myth",
@@ -292,7 +292,7 @@ const DAYS = [
     missed: "Copy the Odyssey Plan Preparation Document and work through the Career Situation Brainstorm, then start building your three plans (current path, alternative, wild card) using the worksheet templates."
   },
   {
-    n: 12, date: "Wed Sep 16", type: "ALL", block: "45", published: true,
+    n: 12, unit: 1, date: "Wed Sep 16", type: "ALL", block: "45", published: true,
     title: "Project management, and prototyping toward informational interviews",
     did: [
       "Work time to finish the three Odyssey Plans",
@@ -309,7 +309,7 @@ const DAYS = [
     missed: "Finish your three Odyssey Plans. Know the career prototyping methods \u2014 informational interviews, job shadowing, volunteering, online research, skill building, side projects \u2014 and that informational interviews are the one to focus on next."
   },
   {
-    n: 13, date: "Thu Sep 17", type: "BLOCK", block: "83", published: false,
+    n: 13, unit: 1, date: "Thu Sep 17", type: "BLOCK", block: "83", published: false,
     title: "Applying project management to your Odyssey Plan",
     did: [
       "Mike Schafer \u2014 the project-management charter applied to your Odyssey Plan (how, what, why, who, when, how much, what could happen)",
@@ -344,23 +344,23 @@ const ASSIGNED = [
 ];
 
 const WEEKS = [
-  {wk:3, dates:"Aug 31 \u2013 Sep 2", unit:"3 \u2014 Career Exploration", focus:"Find Your Why \u00b7 Ikigai \u00b7 Algebra of Wealth"},
-  {wk:4, dates:"Sep 8 \u2013 10", unit:"3 \u2014 Career Exploration", focus:"SchooLinks Career Center and Career Clusters \u00b7 speed dating"},
-  {wk:5, dates:"Sep 14 \u2013 17", unit:"3 \u2014 Career Exploration", focus:"Industry research \u00b7 project management \u00b7 Odyssey Plan"},
-  {wk:6, dates:"Sep 21 \u2013 24", unit:"4 \u2014 Technology Literacy", focus:"Email etiquette, calendar, digital conferencing"},
-  {wk:7, dates:"Sep 29 \u2013 Oct 1", unit:"4 \u2014 Technology Literacy", focus:"AI literacy \u00b7 build your interview list"},
-  {wk:8, dates:"Oct 5 \u2013 8", unit:"5 \u2014 Networking", focus:"Networking"},
-  {wk:9, dates:"Oct 12 \u2013 14", unit:"6 \u2014 Informational Interviews", focus:"Preparing for interviews \u00b7 mock interviews with outside professionals"},
-  {wk:10, dates:"Oct 21 \u2013 22", unit:"6 \u2192 7", focus:"Outreach emails sent"},
-  {wk:11, dates:"Oct 26 \u2013 29", unit:"7 \u2014 Independence", focus:"Interview #1 \u00b7 Pathways Day Oct 28"},
-  {wk:12, dates:"Nov 2 \u2013 5", unit:"7 \u2014 Independence", focus:"Interview #2"},
-  {wk:13, dates:"Nov 9 \u2013 12", unit:"7 \u2014 Independence", focus:"Interview #3 \u00b7 OSHA 10 introduced"},
-  {wk:14, dates:"Nov 16 \u2013 19", unit:"7 \u2014 Independence", focus:"Interview #4 \u00b7 job shadowing"},
-  {wk:15, dates:"Nov 23", unit:"7 \u2014 Independence", focus:"Interview #5 window opens \u00b7 job shadowing"},
-  {wk:16, dates:"Nov 30 \u2013 Dec 3", unit:"7 \u2014 Independence", focus:"Interview #5 continues \u00b7 financial literacy"},
-  {wk:17, dates:"Dec 7 \u2013 10", unit:"10 \u2014 Post-Secondary Planning", focus:"Interview #5 closes \u00b7 post-secondary plan"},
-  {wk:18, dates:"Dec 14 \u2013 17", unit:"11 \u2014 Capstone", focus:"Build and rehearse \u00b7 first presentation slots"},
-  {wk:19, dates:"Dec 21 \u2013 22", unit:"11 \u2014 Capstone", focus:"Presentations \u00b7 final journal"}
+  {wk:3, dates:"Aug 31 \u2013 Sep 2", unit:"2 \u2014 Career Exploration", focus:"Find Your Why \u00b7 Ikigai \u00b7 Algebra of Wealth"},
+  {wk:4, dates:"Sep 8 \u2013 10", unit:"2 \u2014 Career Exploration", focus:"SchooLinks Career Center and Career Clusters \u00b7 speed dating"},
+  {wk:5, dates:"Sep 14 \u2013 17", unit:"2 \u2014 Career Exploration", focus:"Industry research \u00b7 project management \u00b7 Odyssey Plan"},
+  {wk:6, dates:"Sep 21 \u2013 24", unit:"3 \u2014 Tech Literacy", focus:"Email etiquette, calendar, digital conferencing"},
+  {wk:7, dates:"Sep 29 \u2013 Oct 1", unit:"3 \u2014 Tech Literacy", focus:"AI literacy \u00b7 build your interview list"},
+  {wk:8, dates:"Oct 5 \u2013 8", unit:"4 \u2014 Networking", focus:"Networking"},
+  {wk:9, dates:"Oct 12 \u2013 14", unit:"5 \u2014 Informational Interviews", focus:"Preparing for interviews \u00b7 mock interviews with outside professionals"},
+  {wk:10, dates:"Oct 21 \u2013 22", unit:"5 \u2192 6", focus:"Outreach emails sent"},
+  {wk:11, dates:"Oct 26 \u2013 29", unit:"6 \u2014 Independence", focus:"Interview #1 \u00b7 Pathways Day Oct 28"},
+  {wk:12, dates:"Nov 2 \u2013 5", unit:"6 \u2014 Independence", focus:"Interview #2"},
+  {wk:13, dates:"Nov 9 \u2013 12", unit:"6 \u2014 Independence", focus:"Interview #3 \u00b7 OSHA 10 introduced"},
+  {wk:14, dates:"Nov 16 \u2013 19", unit:"6 \u2014 Independence", focus:"Interview #4 \u00b7 job shadowing"},
+  {wk:15, dates:"Nov 23", unit:"6 \u2014 Independence", focus:"Interview #5 window opens \u00b7 job shadowing"},
+  {wk:16, dates:"Nov 30 \u2013 Dec 3", unit:"6 \u2014 Independence", focus:"Interview #5 continues \u00b7 financial literacy"},
+  {wk:17, dates:"Dec 7 \u2013 10", unit:"9 \u2014 Post-Secondary Planning", focus:"Interview #5 closes \u00b7 post-secondary plan"},
+  {wk:18, dates:"Dec 14 \u2013 17", unit:"10 \u2014 Capstone", focus:"Build and rehearse \u00b7 first presentation slots"},
+  {wk:19, dates:"Dec 21 \u2013 22", unit:"10 \u2014 Capstone", focus:"Presentations \u00b7 final journal"}
 ];
 
 const RESOURCES = [
@@ -385,7 +385,7 @@ const RESOURCES = [
     links:[{t:"Syllabus", u:"https://docs.google.com/document/d/13WcAhgfp-SPksNNkdhfKeb0RcSLrptX2zOta0WoRQUU/preview"}, {t:"Agreement", u:"https://docs.google.com/document/d/1Hq66Yi-fpLeXVj3juUG-PzuSdfvHirqcwCfMw2pSx0c/preview"}]
   },
   {
-    title:"Unit 3 \u2014 Career Exploration",
+    title:"Unit 2 \u2014 Career Exploration",
     body:"Find Your Why, Ikigai, and the reading that argues with both of them.",
     links:[
       {t:"Simon Sinek \u2014 How great leaders inspire action", u:"https://youtu.be/nRaqe9M2DYc"},
