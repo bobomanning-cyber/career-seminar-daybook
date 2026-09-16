@@ -271,6 +271,59 @@ const DAYS = [
       {t:"SchooLinks", u:"https://www.schoolinks.com/"}
     ],
     missed: "Read Galloway and answer both questions. Open the SchooLinks Career Center and choose a cluster \u2014 find the salary, education, Q&A and outlook, and start saving jobs. Create a Common Denominators document if you do not have one yet, and keep adding to it."
+  },
+  {
+    n: 11, date: "Mon Sep 14", type: "BLOCK", block: "83", published: true,
+    title: "Odyssey Plans \u2014 introduction",
+    did: [
+      "Michael Horn\u2019s LinkedIn post \u2014 the one-path myth",
+      "What an Odyssey Plan is, and the key principles behind it",
+      "Began building Plan A (current path), Plan B (alternative), and Plan C (wild card)"
+    ],
+    have: ["Favorite Things #1 and #2 \u2014 completed", "Ikigai \u2014 completed", "Common Denominators \u2014 6\u201310 things", "SchooLinks assessments \u2014 all five that were assigned", "3 saved careers in SchooLinks, with the information from the Career Clusters activity", "SchooLinks profile \u2014 first draft", "Journal #3 \u2014 the standard questions, plus a summary of the three careers you decided to explore and why", "See me for a proposal for late work"],
+    due: [
+      {t:"Odyssey Plan A, B and C", when:"Thu Sep 17"}
+    ],
+    links: [
+      {t:"Day 11 slides", u:"https://docs.google.com/presentation/d/1qprXZT4cr8t5TWkKn6vWM3ev8JGfJzjlssppT1zM1TM/preview"},
+      {t:"Odyssey Plan Preparation Document \u2014 make your copy", u:"https://docs.google.com/document/d/1KgZJ9JdN45XVXQpZ9nEHgkAeNAImCq-6FpOtbEWU4Ds/copy"},
+      {t:"Odyssey Plan Worksheets \u2014 make your copy", u:"https://docs.google.com/document/d/1gE8InMyhabyiMuGRYiIT7oJYaxrwJEHUSQhxhuVfK8E/copy"}
+    ],
+    missed: "Copy the Odyssey Plan Preparation Document and work through the Career Situation Brainstorm, then start building your three plans (current path, alternative, wild card) using the worksheet templates."
+  },
+  {
+    n: 12, date: "Wed Sep 16", type: "ALL", block: "45", published: true,
+    title: "Project management, and prototyping toward informational interviews",
+    did: [
+      "Work time to finish the three Odyssey Plans",
+      "Mike Schafer \u2014 introduction to project management, and how it applies to an Odyssey Plan",
+      "Career prototyping \u2014 the methods, landing on informational interviews"
+    ],
+    have: ["Odyssey Plan A, B and C well underway", "An introduction to project management as a skill and a career"],
+    due: [
+      {t:"Odyssey Plan A, B and C", when:"Thu Sep 17"}
+    ],
+    links: [
+      {t:"Day 12 slides", u:"https://docs.google.com/presentation/d/1r9fDQU5asBKmaohbWMLeK3usEn9WHdQ0bLoNrubPJJg/preview"}
+    ],
+    missed: "Finish your three Odyssey Plans. Know the career prototyping methods \u2014 informational interviews, job shadowing, volunteering, online research, skill building, side projects \u2014 and that informational interviews are the one to focus on next."
+  },
+  {
+    n: 13, date: "Thu Sep 17", type: "BLOCK", block: "83", published: false,
+    title: "Applying project management to your Odyssey Plan",
+    did: [
+      "Mike Schafer \u2014 the project-management charter applied to your Odyssey Plan (how, what, why, who, when, how much, what could happen)",
+      "Work Breakdown Structure, modeled on Mike\u2019s own career path",
+      "Built a Work Breakdown Structure for your own Odyssey Plan"
+    ],
+    have: ["Odyssey Plan A, B and C completed"],
+    due: [
+      {t:"Odyssey Plan A, B and C", when:"Thu Sep 17"}
+    ],
+    links: [
+      {t:"Day 13 slides", u:"https://drive.google.com/file/d/1GMwnGftMA9FNrt0Kcp5RO9XAzvMnwDUm/view"}
+    ],
+    missed: "Complete your three Odyssey Plans, and build a Work Breakdown Structure for the plan you\u2019re most focused on."
   }
 ];
 
@@ -286,7 +339,8 @@ const ASSIGNED = [
   {published: true, assigned:"Mon Aug 31", what:"Common Denominators_LastName \u2014 start the document, add the threads that repeat across your activities", due:"Ongoing", where:"Favorite Things \u2014 the full activity (4 tabs)", u:"https://docs.google.com/document/d/1FadCzlPwJGf6q_lgNQ76wo4ca2wWYpbkD6uwKA3_owg/copy"},
   {published: true, assigned:"Mon Aug 31", what:"SchooLinks profile \u2014 five assessments, then first draft of the profile", due:"Wed Sep 2", where:"SchooLinks", u:"https://www.schoolinks.com/"},
   {published: true, assigned:"Wed Sep 2", what:"Galloway, \u201cThe Algebra of Wealth\u201d \u2014 what is his argument, and how does he support it?", due:"Tue Sep 8", where:"Galloway \u2014 The Algebra of Wealth (Medium)", u:"https://medium.com/@profgalloway/the-algebra-of-wealth-dont-follow-your-passion-follow-your-talent-3af23fb96488"},
-  {published: true, assigned:"Wed Sep 2", what:"Journal Entry #2 \u2014 \u201clearn\u201d means in this class or related to your future", due:"Tue Sep 8", where:"Journal for Career Seminar", u:"https://docs.google.com/document/d/1d7rDk7dLS8mayxoI_lEebzi3UqD0KwgF1qWXJyN1CxM/copy"}
+  {published: true, assigned:"Wed Sep 2", what:"Journal Entry #2 \u2014 \u201clearn\u201d means in this class or related to your future", due:"Tue Sep 8", where:"Journal for Career Seminar", u:"https://docs.google.com/document/d/1d7rDk7dLS8mayxoI_lEebzi3UqD0KwgF1qWXJyN1CxM/copy"},
+  {published: true, assigned:"Mon Sep 14", what:"Odyssey Plan A, B and C \u2014 copy the Preparation Document and build all three plans", due:"Thu Sep 17", where:"Odyssey Plan Preparation Document", u:"https://docs.google.com/document/d/1KgZJ9JdN45XVXQpZ9nEHgkAeNAImCq-6FpOtbEWU4Ds/copy"}
 ];
 
 const WEEKS = [
