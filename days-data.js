@@ -309,12 +309,11 @@ const DAYS = [
     missed: "Finish your three Odyssey Plans. Know the career prototyping methods \u2014 informational interviews, job shadowing, volunteering, online research, skill building, side projects \u2014 and that informational interviews are the one to focus on next."
   },
   {
-    n: 13, unit: 1, date: "Thu Sep 17", type: "BLOCK", block: "83", published: false,
-    title: "Applying project management to your Odyssey Plan",
+    n: 13, unit: 1, date: "Thu Sep 17", type: "BLOCK", block: "83", published: true,
+    title: "Odyssey Plans due, and project management with Mike Schafer",
     did: [
-      "Mike Schafer \u2014 the project-management charter applied to your Odyssey Plan (how, what, why, who, when, how much, what could happen)",
-      "Work Breakdown Structure, modeled on Mike\u2019s own career path",
-      "Built a Work Breakdown Structure for your own Odyssey Plan"
+      "Odyssey Plan A, B and C due",
+      "Mike Schafer, project management consultant \u2014 project management as a skill, as a career, and how it applies to building the plans"
     ],
     have: ["Odyssey Plan A, B and C completed"],
     due: [
@@ -323,7 +322,31 @@ const DAYS = [
     links: [
       {t:"Day 13 slides", u:"https://drive.google.com/file/d/1GMwnGftMA9FNrt0Kcp5RO9XAzvMnwDUm/view"}
     ],
-    missed: "Complete your three Odyssey Plans, and build a Work Breakdown Structure for the plan you\u2019re most focused on."
+    missed: "Turn in your three Odyssey Plans as soon as you\u2019re back \u2014 they were due today. Come find me for what Mike Schafer covered on project management as a skill and a career, and how it applies to the plan you built."
+  },
+  {
+    n: 14, unit: 2, date: "Mon Sep 21", type: "BLOCK", block: "83", published: true,
+    title: "Email and professional communication",
+    did: [
+      "Learning targets \u2014 why professional communication matters, checking and replying to email daily, email vs. text, navigating the Mac and PC worlds, converting Google files to PDF/Word/Excel/PowerPoint and attaching them",
+      "Group work on two real student emails",
+      "The back-and-forth \u2014 how many emails it takes when the first one is vague",
+      "Cc and Bcc",
+      "Hyperlinks",
+      "Skills Check 1 \u2014 email your partner as if they\u2019re your first interview; they score it on the Communication Skills Checklist",
+      "Skills Check 2 \u2014 reply with your Odyssey Plan A as a PDF, cc Mr. Manning, bcc classmates; partner scores it on the same checklist"
+    ],
+    have: ["Odyssey Plan A, B and C \u2014 completed and turned in"],
+    due: [
+      {t:"Journal #4", when:"TBD"},
+      {t:"Employability Skills", when:"TBD"}
+    ],
+    links: [
+      {t:"Student Email Scenarios", u:"https://docs.google.com/document/d/10wFAlCUbjwSC_UO3nPm4bVxcpbPxZ_EKxyiRvEOpk38/copy"},
+      {t:"Day 14 slides", u:"https://docs.google.com/presentation/d/1A9adlhXFFGDtEBQfiZGe3dJn2kjYKwHpr9tK7qv12jQ/preview"},
+      {t:"Communication Skills Checklist", u:"https://docs.google.com/document/d/11efaCNLbcvxSVqmvelM_mwyh99Vsz41Af3WwyWOO5Rc/copy"}
+    ],
+    missed: "Come find me to walk through the email learning targets \u2014 professional communication, checking email daily, email vs. text, Mac/PC basics, and converting Google files to PDF, Word, Excel or PowerPoint. Then do both Skills Checks with a partner: email them as if they\u2019re your first interview, and reply with your Odyssey Plan A attached as a PDF, cc me, bcc your table \u2014 score each other against the Communication Skills Checklist."
   }
 ];
 
