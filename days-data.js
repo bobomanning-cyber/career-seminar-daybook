@@ -338,8 +338,8 @@ const DAYS = [
     ],
     have: ["Odyssey Plan A, B and C \u2014 completed and turned in"],
     due: [
-      {t:"Journal #4", when:"TBD"},
-      {t:"Employability Skills", when:"TBD"}
+      {t:"Journal #4", when:"Thu Sep 24"},
+      {t:"Employability Skills", when:"Thu Sep 24"}
     ],
     links: [
       {t:"Student Email Scenarios", u:"https://docs.google.com/document/d/10wFAlCUbjwSC_UO3nPm4bVxcpbPxZ_EKxyiRvEOpk38/copy"},
