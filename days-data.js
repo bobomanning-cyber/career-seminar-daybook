@@ -347,6 +347,29 @@ const DAYS = [
       {t:"Communication Skills Checklist", u:"https://docs.google.com/document/d/11efaCNLbcvxSVqmvelM_mwyh99Vsz41Af3WwyWOO5Rc/copy"}
     ],
     missed: "Come find me to walk through the email learning targets \u2014 professional communication, checking email daily, email vs. text, Mac/PC basics, and converting Google files to PDF, Word, Excel or PowerPoint. Then do both Skills Checks with a partner: email them as if they\u2019re your first interview, and reply with your Odyssey Plan A attached as a PDF, cc me, bcc your table \u2014 score each other against the Communication Skills Checklist."
+  },
+  {
+    n: 15, unit: 2, date: "Wed Sep 23", type: "ALL", block: "45", published: true,
+    title: "Google Calendar, and finishing the email skills check",
+    did: [
+      "Skills Check 2 finished — the reply with Odyssey Plan A as a PDF, cc Mr. Manning, bcc classmates — scored on the Communication Skills Checklist",
+      "Organizational Skills: created a Google folder, a “Career Seminar” calendar, responded to a Test invite, created a Test Meeting invite with a virtual link",
+      "The mock interview reviewed — how it runs, the four-area question bank, what to consider before answering",
+      "Silent work time on the Mock Interview Prep worksheet"
+    ],
+    have: ["Skills Check 1 and 2 — scored", "Career Seminar Google Calendar set up", "Mock Interview Prep worksheet, in progress"],
+    due: [
+      {t:"Journal #4", when:"Thu Sep 24"},
+      {t:"Employability Skills", when:"Thu Sep 24"},
+      {t:"Mock Interview Prep worksheet, finished", when:"Thu Sep 24"}
+    ],
+    links: [
+      {t:"Day 15 slides", u:"https://docs.google.com/presentation/d/1X_s-xmAsaE1K0yITN6zsXQWquZz-uSkYZL55PdZVCK8/preview"},
+      {t:"Organizational Skills slides", u:"https://docs.google.com/presentation/d/1gXORDziJoxk1AXl9bVHjTwCs8CIzwlH_k-7u6M7Z3x0/preview"},
+      {t:"Mock Interview Prep", u:"https://docs.google.com/document/d/1tCd_3f655sL_K75Z7669WpHvhzrRoTldNrszx1-mMKg/copy"},
+      {t:"Communication Skills Checklist", u:"https://docs.google.com/document/d/11efaCNLbcvxSVqmvelM_mwyh99Vsz41Af3WwyWOO5Rc/copy"}
+    ],
+    missed: "Finish Skills Check 2 with a partner and get it scored on the Communication Skills Checklist. Set up your Google folder and a “Career Seminar” calendar. Read through the mock interview question bank, then finish your Mock Interview Prep worksheet before Thursday’s interviews."
   }
 ];
 
