@@ -370,6 +370,24 @@ const DAYS = [
       {t:"Communication Skills Checklist", u:"https://docs.google.com/document/d/11efaCNLbcvxSVqmvelM_mwyh99Vsz41Af3WwyWOO5Rc/copy"}
     ],
     missed: "Finish Skills Check 2 with a partner and get it scored on the Communication Skills Checklist. Set up your Google folder and a “Career Seminar” calendar. Read through the mock interview question bank, then finish your Mock Interview Prep worksheet before Thursday’s interviews."
+  },
+  {
+    n: 16, unit: 2, date: "Thu Sep 24", type: "BLOCK", block: "83", published: true,
+    title: "Mock interviews continue — Josiah and Patrick",
+    did: [
+      "Mock Interview Prep check-in — where everyone stood on the prep document, reminder to use specific examples, not generalities",
+      "Josiah Bliss's interview — six minutes of questions from the four-area bank, two minutes of panel feedback",
+      "Prep document work time for the rest of the class, plus a debrief on Josiah's interview",
+      "Patrick Lam's interview, time allowing — same format"
+    ],
+    have: ["Mock Interview Prep worksheet, finished", "Josiah's interview completed"],
+    due: [],
+    links: [
+      {t:"Day 16 slides", u:"https://docs.google.com/presentation/d/1vFEGmzrwrvkdrzQSDY_298TqoeJUsPqy5GjzUf3OtjQ/preview"},
+      {t:"Meetings and Interview Checklist", u:"https://docs.google.com/document/d/1Rv-p9-2rdXycPx7I1BUg7z3bS6MQk-_EPNkynDrb0Ww/copy"},
+      {t:"Mock Interview Prep", u:"https://docs.google.com/document/d/1tCd_3f655sL_K75Z7669WpHvhzrRoTldNrszx1-mMKg/copy"}
+    ],
+    missed: "Come find me to set up your own mock interview: one person schedules the invite, the other joins from the link — this is the calendar skill from Day 15, live. Then finish your Mock Interview Prep worksheet and use the Meetings and Interview Checklist to score a partner's practice round before your own interview."
   }
 ];
 
