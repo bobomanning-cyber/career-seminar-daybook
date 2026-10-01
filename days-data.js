@@ -398,15 +398,33 @@ const DAYS = [
     ],
     have: ["Mock Interview Prep worksheet", "Your interview checklists"],
     due: [
-      {t:"Journal #5", when:"Fri Oct 2"},
+      {t:"Journal #5", when:"Mon Oct 5"},
       {t:"Employability Skills", when:"Mon Oct 5"}
     ],
     links: [
       {t:"Day 17 slides", u:"https://docs.google.com/presentation/d/1vQRw4NV4MlWD-DuASpBcVM8caPwKlJMOYFen6pTvdKk/preview"},
-      {t:"Meetings and Interview Checklist", u:"https://docs.google.com/document/d/1Rv-p9-2rdXycPx7I1BUg7z3bS6MQk-_EPNkynDrb0Ww/copy"},
-      {t:"Journal for Career Seminar", u:"https://docs.google.com/document/d/1d7rDk7dLS8mayxoI_lEebzi3UqD0KwgF1qWXJyN1CxM/copy"}
+      {t:"Meetings and Interview Checklist", u:"https://docs.google.com/document/d/1Rv-p9-2rdXycPx7I1BUg7z3bS6MQk-_EPNkynDrb0Ww/copy"}
     ],
     missed: "Answer the two journal questions on the Day 17 slides. Circle the Employability Skills that connect to email, calendar and interviewing, then update your assessment."
+  },
+  {
+    n: 18, unit: 2, date: "Mon Oct 5", type: "BLOCK", block: "83", published: true,
+    title: "Mock interviews",
+    did: [
+      "Mock interviews #5 and #6",
+      "Interview reflection",
+      "Professional Contacts"
+    ],
+    have: ["Mock Interview Prep worksheet", "Your interview checklists", "Professional Contacts document"],
+    due: [
+      {t:"Journal #5", when:"Mon Oct 5"},
+      {t:"Employability Skills", when:"Mon Oct 5"}
+    ],
+    links: [
+      {t:"Day 18 slides", u:"https://docs.google.com/presentation/d/1SnQ4NsM6I1YsNewt40M5ojuuxsbK6svip-kOmbnvYis/preview"},
+      {t:"Meetings and Interview Checklist", u:"https://docs.google.com/document/d/1Rv-p9-2rdXycPx7I1BUg7z3bS6MQk-_EPNkynDrb0Ww/copy"}
+    ],
+    missed: "Reread your Mock Interview Prep and pick one answer that landed and one that stalled. Add names to your Professional Contacts document."
   }
 ];
 
