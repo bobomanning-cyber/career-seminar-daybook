@@ -365,7 +365,6 @@ const DAYS = [
     ],
     links: [
       {t:"Day 15 slides", u:"https://docs.google.com/presentation/d/1X_s-xmAsaE1K0yITN6zsXQWquZz-uSkYZL55PdZVCK8/preview"},
-      {t:"Organizational Skills slides", u:"https://docs.google.com/presentation/d/1gXORDziJoxk1AXl9bVHjTwCs8CIzwlH_k-7u6M7Z3x0/preview"},
       {t:"Mock Interview Prep", u:"https://docs.google.com/document/d/1tCd_3f655sL_K75Z7669WpHvhzrRoTldNrszx1-mMKg/copy"},
       {t:"Communication Skills Checklist", u:"https://docs.google.com/document/d/11efaCNLbcvxSVqmvelM_mwyh99Vsz41Af3WwyWOO5Rc/copy"}
     ],
@@ -373,21 +372,41 @@ const DAYS = [
   },
   {
     n: 16, unit: 2, date: "Thu Sep 24", type: "BLOCK", block: "83", published: true,
-    title: "Mock interviews continue — Josiah and Patrick",
+    title: "Mock interviews",
     did: [
-      "Mock Interview Prep check-in — where everyone stood on the prep document, reminder to use specific examples, not generalities",
-      "Josiah Bliss's interview — six minutes of questions from the four-area bank, two minutes of panel feedback",
-      "Prep document work time for the rest of the class, plus a debrief on Josiah's interview",
-      "Patrick Lam's interview, time allowing — same format"
+      "Mock interview prep",
+      "Mock interviews #1 and #2",
+      "Prep work time"
     ],
-    have: ["Mock Interview Prep worksheet, finished", "Josiah's interview completed"],
+    have: ["Mock Interview Prep worksheet"],
     due: [],
     links: [
       {t:"Day 16 slides", u:"https://docs.google.com/presentation/d/1vFEGmzrwrvkdrzQSDY_298TqoeJUsPqy5GjzUf3OtjQ/preview"},
       {t:"Meetings and Interview Checklist", u:"https://docs.google.com/document/d/1Rv-p9-2rdXycPx7I1BUg7z3bS6MQk-_EPNkynDrb0Ww/copy"},
       {t:"Mock Interview Prep", u:"https://docs.google.com/document/d/1tCd_3f655sL_K75Z7669WpHvhzrRoTldNrszx1-mMKg/copy"}
     ],
-    missed: "Come find me to set up your own mock interview: one person schedules the invite, the other joins from the link — this is the calendar skill from Day 15, live. Then finish your Mock Interview Prep worksheet and use the Meetings and Interview Checklist to score a partner's practice round before your own interview."
+    missed: "Finish your Mock Interview Prep worksheet."
+  },
+  {
+    n: 17, unit: 2, date: "Thu Oct 1", type: "BLOCK", block: "83", published: true,
+    title: "Mock interviews",
+    did: [
+      "Mock interview prep",
+      "Mock interviews #3 and #4",
+      "Journal #5",
+      "Employability Skills"
+    ],
+    have: ["Mock Interview Prep worksheet", "Your interview checklists"],
+    due: [
+      {t:"Journal #5", when:"Fri Oct 2"},
+      {t:"Employability Skills", when:"Mon Oct 5"}
+    ],
+    links: [
+      {t:"Day 17 slides", u:"https://docs.google.com/presentation/d/1vQRw4NV4MlWD-DuASpBcVM8caPwKlJMOYFen6pTvdKk/preview"},
+      {t:"Meetings and Interview Checklist", u:"https://docs.google.com/document/d/1Rv-p9-2rdXycPx7I1BUg7z3bS6MQk-_EPNkynDrb0Ww/copy"},
+      {t:"Journal for Career Seminar", u:"https://docs.google.com/document/d/1d7rDk7dLS8mayxoI_lEebzi3UqD0KwgF1qWXJyN1CxM/copy"}
+    ],
+    missed: "Answer the two journal questions on the Day 17 slides. Circle the Employability Skills that connect to email, calendar and interviewing, then update your assessment."
   }
 ];
 
