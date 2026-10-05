@@ -412,19 +412,20 @@ const DAYS = [
     title: "Mock interviews",
     did: [
       "Mock interviews #5 and #6",
-      "Interview reflection",
-      "Professional Contacts"
+      "Journal #5",
+      "Employability Skills",
+      "Interview reflection"
     ],
-    have: ["Mock Interview Prep worksheet", "Your interview checklists", "Professional Contacts document"],
+    have: ["Mock Interview Prep worksheet", "Your interview checklists", "Your journal"],
     due: [
       {t:"Journal #5", when:"Mon Oct 5"},
-      {t:"Employability Skills", when:"Mon Oct 5"}
+      {t:"Employability Skills", when:"Wed Oct 7"}
     ],
     links: [
-      {t:"Day 18 slides", u:"https://docs.google.com/presentation/d/1SnQ4NsM6I1YsNewt40M5ojuuxsbK6svip-kOmbnvYis/preview"},
+      {t:"Day 18 slides", u:"https://docs.google.com/presentation/d/1wMFhMsvofEn2pTVlpAToQmYS_6SLPpEfHpHgsSuPCs4/preview"},
       {t:"Meetings and Interview Checklist", u:"https://docs.google.com/document/d/1Rv-p9-2rdXycPx7I1BUg7z3bS6MQk-_EPNkynDrb0Ww/copy"}
     ],
-    missed: "Reread your Mock Interview Prep and pick one answer that landed and one that stalled. Add names to your Professional Contacts document."
+    missed: "Finish Journal #5. Complete your Employability Skills assessment by Wednesday."
   }
 ];
 
