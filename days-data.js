@@ -399,7 +399,7 @@ const DAYS = [
     have: ["Mock Interview Prep worksheet", "Your interview checklists"],
     due: [
       {t:"Journal #5", when:"Mon Oct 5"},
-      {t:"Employability Skills", when:"Mon Oct 5"}
+      {t:"Employability Skills", when:"Wed Oct 7"}
     ],
     links: [
       {t:"Day 17 slides", u:"https://docs.google.com/presentation/d/1vQRw4NV4MlWD-DuASpBcVM8caPwKlJMOYFen6pTvdKk/preview"},
@@ -412,6 +412,7 @@ const DAYS = [
     title: "Mock interviews",
     did: [
       "Mock interviews #5 and #6",
+      "Virtual Meeting setup: Google Meet, Teams",
       "Journal #5",
       "Employability Skills",
       "Interview reflection"
@@ -426,6 +427,34 @@ const DAYS = [
       {t:"Meetings and Interview Checklist", u:"https://docs.google.com/document/d/1Rv-p9-2rdXycPx7I1BUg7z3bS6MQk-_EPNkynDrb0Ww/copy"}
     ],
     missed: "Finish Journal #5. Complete your Employability Skills assessment by Wednesday."
+  },
+  {
+    n: 19, unit: 3, date: "Wed Oct 7", type: "ALL", block: "45", published: true,
+    title: "The secret conversation",
+    did: ["Journal #5 share", "Forget Job Postings", "Professional Contacts"],
+    have: ["Your journal", "Professional Contacts document"],
+    due: [
+      {t:"Professional Contacts revisit", when:"Thu Oct 8"}
+    ],
+    links: [
+      {t:"Day 19 slides", u:"https://docs.google.com/presentation/d/1JkDTE-1KuEloIGq-f3sKurzeRZQKPB9m0qRbLlWKZ2c/preview"},
+      {t:"Forget Job Postings (Forbes)", u:"https://www.forbes.com/sites/niritcohen/2024/11/11/forget-job-postings-your-next-job-begins-with-a-secret-conversation/"}
+    ],
+    missed: "Read the article. Add names to your Professional Contacts."
+  },
+  {
+    n: 20, unit: 3, date: "Thu Oct 8", type: "BLOCK", block: "83", published: true,
+    title: "Networking work",
+    did: ["Pool the network", "Informational interview emails", "Interview questions"],
+    have: ["Professional Contacts document", "Day 20 worksheet"],
+    due: [
+      {t:"Interview email drafts — first and second choice", when:"Mon Oct 12"},
+      {t:"Interview questions — started", when:"Mon Oct 12"}
+    ],
+    links: [
+      {t:"Day 20 worksheet", u:"https://docs.google.com/document/d/10UtaWtwO9hgpodsmNxUiY7kiu3zgCfMhXvoT6Wm73kY/copy"}
+    ],
+    missed: "Do the Day 20 worksheet. Have a few classmates add ideas to your Pool the Network column."
   }
 ];
 
