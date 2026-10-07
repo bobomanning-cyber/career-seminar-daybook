@@ -76,7 +76,6 @@ const DAYS = [
       {t:"SchooLinks profile + résumé", when:"TBD"}
     ],
     links: [
-      {t:"The article (Forbes)", u:"https://www.forbes.com/sites/brunomanno/2024/11/29/four-job-launch-pain-points-in-young-peoples-career-journey/"},
       {t:"Where Do I Stand? handout", u:"https://docs.google.com/document/d/1y-4xc9_Lcsg-0ktMCSiNUjh_mrppRAK1yz9wkrUw4oM/copy"},
       {t:"SchooLinks slides", u:"https://docs.google.com/presentation/d/1qcBF1zEwSumoGwkYqLbNw4LoDqvNIMeTrFxw8ZJ5sGc/preview"},
       {t:"SchooLinks", u:"https://app.schoolinks.com/login/k12"}
@@ -438,7 +437,7 @@ const DAYS = [
     ],
     links: [
       {t:"Day 19 slides", u:"https://docs.google.com/presentation/d/1JkDTE-1KuEloIGq-f3sKurzeRZQKPB9m0qRbLlWKZ2c/preview"},
-      {t:"Forget Job Postings (Forbes)", u:"https://www.forbes.com/sites/niritcohen/2024/11/11/forget-job-postings-your-next-job-begins-with-a-secret-conversation/"}
+      {t:"Forget Job Postings", u:"https://drive.google.com/file/d/1aqPpDDGUVzGFcGVAO8XngMIxWff6JTiX/preview"}
     ],
     missed: "Read the article. Add names to your Professional Contacts."
   },
@@ -452,6 +451,7 @@ const DAYS = [
       {t:"Interview questions — started", when:"Mon Oct 12"}
     ],
     links: [
+      {t:"Day 20 slides", u:"https://docs.google.com/presentation/d/1tBdvNu2-hzSHj1DzD2PUKtS5CDw8TyE-OW4xw4UFGos/preview"},
       {t:"Day 20 worksheet", u:"https://docs.google.com/document/d/10UtaWtwO9hgpodsmNxUiY7kiu3zgCfMhXvoT6Wm73kY/copy"}
     ],
     missed: "Do the Day 20 worksheet. Have a few classmates add ideas to your Pool the Network column."
@@ -460,7 +460,7 @@ const DAYS = [
 
 const ASSIGNED = [
   {published: true, assigned:"Tue Aug 18", what:"Behavior & Transportation Agreement, signed", due:"Fri Aug 21", where:"Behavior & Transportation Agreement", u:"https://docs.google.com/document/d/1Hq66Yi-fpLeXVj3juUG-PzuSdfvHirqcwCfMw2pSx0c/preview"},
-  {published: true, assigned:"Wed Aug 19", what:"SchooLinks profile + résumé", due:"TBD", where:"The article (Forbes)", u:"https://www.forbes.com/sites/brunomanno/2024/11/29/four-job-launch-pain-points-in-young-peoples-career-journey/"},
+  {published: true, assigned:"Wed Aug 19", what:"SchooLinks profile + résumé", due:"TBD", where:"SchooLinks", u:"https://app.schoolinks.com/login/k12"},
   {published: true, assigned:"Thu Aug 20", what:"Three things people come to you for — each labelled good at / like a lot / known for, plus a competency word", due:"Fri Aug 21", where:"Solutions to Gaps + Who Knows You handout", u:"https://docs.google.com/document/d/1mMUU8ICpqyjta65dn_zaCJ9NdKnBSepOL5jzG-c210g/copy"},
   {published: true, assigned:"Thu Aug 20", what:"Start your Who Knows You list", due:"Fri Aug 21", where:"Solutions to Gaps + Who Knows You handout", u:"https://docs.google.com/document/d/1mMUU8ICpqyjta65dn_zaCJ9NdKnBSepOL5jzG-c210g/copy"},
   {published: true, assigned:"Fri Aug 21", what:"Move your names into the Professional Contacts document", due:"Mon Aug 24", where:"Professional Contacts — make your copy", u:"https://docs.google.com/document/d/16AKMNz0kI8voEOYHW44cnoOSRRGOUlRIU8ikYPmUDY0/copy"},
