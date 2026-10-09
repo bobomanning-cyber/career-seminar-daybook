@@ -455,6 +455,36 @@ const DAYS = [
       {t:"Day 20 worksheet", u:"https://docs.google.com/document/d/10UtaWtwO9hgpodsmNxUiY7kiu3zgCfMhXvoT6Wm73kY/copy"}
     ],
     missed: "Do the Day 20 worksheet. Have a few classmates add ideas to your Pool the Network column."
+  },
+  {
+    n: 21, unit: 3, date: "Mon Oct 12", type: "BLOCK", block: "83", published: true,
+    title: "Interview emails",
+    did: ["Interview Planner", "Scheduling", "Interview email drafts"],
+    have: ["Professional Contacts document", "Interview email drafts", "Interview questions"],
+    due: [
+      {t:"Interview email drafts — shared with Mr. Manning", when:"Tue Oct 13"}
+    ],
+    links: [
+      {t:"Day 21 slides", u:"https://docs.google.com/presentation/d/1Mwk0CoiYbUObToMs41sMvB9y9vBp2SH-YDpXYNUx2jM/preview"},
+      {t:"Interview Planner", u:"https://docs.google.com/document/d/1Gk92NUa6J7-L94bcrkowHrpOUgJSpWIqC4VX-LuDi7I/copy"},
+      {t:"Informational Interviews", u:"https://docs.google.com/document/d/13ICRSgqR2oRksEyK8x-KKav1qPUwKAGGuUxqnKsAN-Q/preview"}
+    ],
+    missed: "Work through the Interview Planner checklist. Share your email drafts with Mr. Manning."
+  },
+  {
+    n: 22, unit: 4, date: "Wed Oct 14", type: "ALL", block: "45", published: true,
+    title: "Send",
+    did: ["Interview emails sent", "Journal #6", "Employability Skills"],
+    have: ["Approved email drafts", "Journal"],
+    due: [
+      {t:"Interview emails sent — cc Mr. Manning", when:"Wed Oct 14"},
+      {t:"Journal #6", when:"Wed Oct 21"},
+      {t:"Employability Skills", when:"Wed Oct 21"}
+    ],
+    links: [
+      {t:"Day 22 slides", u:"https://docs.google.com/presentation/d/1Lluw20SgrSVSF2cqiXzXSaIpf_TWlx-UG6g0-reRw7c/preview"}
+    ],
+    missed: "Send both emails once Mr. Manning approves them, and cc him. Write Journal #6 and Employability Skills."
   }
 ];
 
